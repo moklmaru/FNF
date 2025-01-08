@@ -485,6 +485,7 @@ class TitleState extends MusicBeatState
 			#end
 		}
 
+		if (initialized && !skippedIntro) // will automatically skip directly into freeplay for now
 		if (initialized && pressedEnter && !skippedIntro)
 		{
 			skipIntro();
