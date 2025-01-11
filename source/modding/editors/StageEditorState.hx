@@ -1,24 +1,17 @@
 package modding.editors;
 
-import gameplay.stages.StageData;
+
 import core.PsychCamera;
-import gameplay.Character;
 import modding.psychlua.LuaUtils;
 
-import flixel.FlxObject;
 import flixel.addons.display.FlxBackdrop;
 import flixel.addons.display.FlxGridOverlay;
-import flixel.math.FlxRect;
 import flixel.util.FlxDestroyUtil;
 
-import openfl.utils.Assets;
 
 import openfl.display.Sprite;
 
-import openfl.net.FileReference;
 
-import openfl.events.Event;
-import openfl.events.IOErrorEvent;
 
 import modding.psychlua.ModchartSprite;
 import flash.net.FileFilter;

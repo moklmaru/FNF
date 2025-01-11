@@ -1,14 +1,8 @@
 package gameplay;
 
-import core.WeekData;
 
-import gameplay.Character;
-import flixel.FlxObject;
-import flixel.FlxSubState;
 import flixel.math.FlxPoint;
 
-import menu.story.StoryMenuState;
-import menu.freeplay.FreeplayState;
 
 class GameOverSubstate extends FunkinSubState
 {

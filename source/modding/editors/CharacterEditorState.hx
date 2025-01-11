@@ -5,14 +5,8 @@ import flixel.graphics.FlxGraphic;
 import flixel.system.debug.interaction.tools.Pointer.GraphicCursorCross;
 import flixel.util.FlxDestroyUtil;
 
-import openfl.net.FileReference;
-import openfl.events.Event;
-import openfl.events.IOErrorEvent;
-import openfl.utils.Assets;
 
-import gameplay.Character;
 import gameplay.hud.HealthIcon;
-import menu.common.Bar;
 
 import modding.editors.content.Prompt;
 import modding.editors.content.PsychJsonPrinter;

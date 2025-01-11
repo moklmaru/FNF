@@ -1,7 +1,5 @@
 package gameplay.cutscenes; 
 
-import flixel.FlxBasic;
-import flixel.util.FlxSort;
 import flixel.util.FlxDestroyUtil;
 import flixel.addons.display.FlxPieDial;
 

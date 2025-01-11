@@ -1,7 +1,5 @@
 package gameplay.stages;
 
-import gameplay.stages.BGSprite;
-
 class Template extends BaseStage
 {
 	// If you're moving your stage from PlayState to a stage file,

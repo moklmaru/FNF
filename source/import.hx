@@ -21,47 +21,78 @@ import sys.io.*;
 import js.html.*;
 #end
 
-import core.util.Paths;
-import core.controls.Controls;
-import core.util.CoolUtil;
 import core.FunkinState;
 import core.FunkinSubState;
-import menu.options.ClientPrefs;
-import core.Conductor;
-import gameplay.stages.BaseStage;
-import gameplay.Difficulty;
-import modding.Mods;
-import core.Language;
-
-import modding.editors.objects.*; //Psych-UI
-
+import core.WeekData;
 import core.Alphabet;
-import gameplay.stages.BGSprite;
+import core.Conductor;
+import core.Language;
+import core.util.Paths;
+import core.util.CoolUtil;
+import core.controls.Controls;
 
-import gameplay.PlayState;
+import menu.options.ClientPrefs;
+import menu.main.MainMenuState;
+import menu.story.StoryMenuState;
+import menu.freeplay.FreeplayState;
 import menu.transition.LoadingState;
 import menu.transition.TransitionSubState;
+import menu.common.*;
+
+import gameplay.PlayState;
+import gameplay.Song;
+import gameplay.Character;
+import gameplay.Difficulty;
+import gameplay.GameOverSubstate;
+import gameplay.stages.StageData;
+import gameplay.stages.BaseStage;
+import gameplay.stages.BGSprite;
+import gameplay.notes.*;
+import gameplay.notes.Note.EventNote;
+
+import modding.Mods;
+import modding.editors.objects.*; //Psych-UI
 
 #if flxanimate
 import flxanimate.*;
 import flxanimate.PsychFlxAnimate as FlxAnimate;
 #end
 
-//Flixel
-import flixel.sound.FlxSound;
+// Haxe
+import haxe.Json;
+import haxe.io.Path;
+
+// Flixel
 import flixel.FlxG;
+import flixel.FlxBasic;
+import flixel.FlxObject;
 import flixel.FlxSprite;
+import flixel.FlxState;
+import flixel.FlxSubState;
 import flixel.FlxCamera;
+import flixel.sound.FlxSound;
 import flixel.math.FlxMath;
 import flixel.math.FlxPoint;
+import flixel.math.FlxRect;
 import flixel.util.FlxColor;
+import flixel.util.FlxGradient;
 import flixel.util.FlxTimer;
+import flixel.util.FlxSave;
+import flixel.util.FlxStringUtil;
+import flixel.util.FlxSort;
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.group.FlxSpriteGroup;
+import flixel.group.FlxGroup;
 import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.input.keyboard.FlxKey;
 import flixel.addons.transition.FlxTransitionableState;
+
+// OpenFL
+import openfl.events.Event;
+import openfl.events.IOErrorEvent;
+import openfl.net.FileReference;
 
 using StringTools;
 #end

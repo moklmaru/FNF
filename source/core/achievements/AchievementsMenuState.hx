@@ -1,9 +1,5 @@
 package core.achievements;
 
-import flixel.FlxObject;
-import flixel.util.FlxSort;
-import menu.common.Bar;
-import menu.main.MainMenuState;
 
 #if ACHIEVEMENTS_ALLOWED
 class AchievementsMenuState extends FunkinState

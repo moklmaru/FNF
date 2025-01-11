@@ -1,7 +1,5 @@
 package gameplay.cutscenes;
 
-import haxe.Json;
-import openfl.utils.Assets;
 
 import gameplay.cutscenes.TypedAlphabet;
 import gameplay.cutscenes.DialogueCharacter;

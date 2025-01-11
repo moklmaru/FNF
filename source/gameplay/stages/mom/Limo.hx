@@ -1,6 +1,5 @@
 package gameplay.stages.mom;
 
-import gameplay.stages.BGSprite;
 import gameplay.stages.mom.BackgroundDancer;
 
 enum HenchmenKillState

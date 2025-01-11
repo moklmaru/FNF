@@ -1,10 +1,8 @@
 package gameplay.stages.pico;
 
-import gameplay.stages.BGSprite;
 import gameplay.stages.pico.PhillyTrain;
 import gameplay.stages.pico.PhillyGlowGradient;
 import gameplay.stages.pico.PhillyGlowParticle;
-import gameplay.Character;
 
 class Philly extends BaseStage
 {

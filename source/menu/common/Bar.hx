@@ -1,6 +1,5 @@
 package menu.common;
 
-import flixel.math.FlxRect;
 
 class Bar extends FlxSpriteGroup
 {

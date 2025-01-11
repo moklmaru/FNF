@@ -1,10 +1,7 @@
 package gameplay.stages.tank;
 
-import gameplay.stages.BGSprite;
 import gameplay.stages.tank.*;
 import gameplay.cutscenes.CutsceneHandler;
-import gameplay.GameOverSubstate;
-import gameplay.Character;
 
 class Tank extends BaseStage
 {

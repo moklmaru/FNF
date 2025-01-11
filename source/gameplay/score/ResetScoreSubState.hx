@@ -1,9 +1,7 @@
 package gameplay.score;
 
-import core.WeekData;
 import gameplay.score.Highscore;
 
-import flixel.FlxSubState;
 import gameplay.hud.HealthIcon;
 
 class ResetScoreSubState extends FunkinSubState

@@ -1,6 +1,5 @@
 package gameplay.cutscenes;
 
-import haxe.Json;
 import lime.utils.Assets;
 
 typedef DialogueAnimArray = {

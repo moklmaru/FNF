@@ -1,7 +1,6 @@
 package core.achievements;
 
 #if ACHIEVEMENTS_ALLOWED
-import openfl.events.Event;
 import openfl.geom.Matrix;
 import flash.display.BitmapData;
 import openfl.Lib;

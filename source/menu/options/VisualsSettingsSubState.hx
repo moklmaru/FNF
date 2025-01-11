@@ -1,9 +1,5 @@
 package menu.options;
 
-import gameplay.notes.Note;
-import gameplay.notes.StrumNote;
-import gameplay.notes.NoteSplash;
-import core.Alphabet;
 
 class VisualsSettingsSubState extends BaseOptionsMenu
 {

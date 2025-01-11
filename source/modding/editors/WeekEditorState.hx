@@ -1,14 +1,8 @@
 package modding.editors;
 
-import core.WeekData;
-
-import openfl.utils.Assets;
-import openfl.net.FileReference;
-import openfl.events.Event;
-import openfl.events.IOErrorEvent;
 import flash.net.FileFilter;
 import lime.system.Clipboard;
-import haxe.Json;
+import openfl.utils.Assets;
 
 import gameplay.hud.HealthIcon;
 import menu.story.MenuCharacter;

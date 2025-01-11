@@ -1,8 +1,6 @@
 package modding;
 
-import openfl.utils.Assets;
 
-import haxe.Json;
 
 typedef ModsList = {
 	enabled:Array<String>,

@@ -1,7 +1,5 @@
 package gameplay.stages.weeb;
 
-import gameplay.stages.BGSprite;
-import gameplay.GameOverSubstate;
 import gameplay.cutscenes.DialogueBox;
 import gameplay.stages.weeb.BackgroundGirls;
 

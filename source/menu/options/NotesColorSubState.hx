@@ -3,12 +3,8 @@ package menu.options;
 import flixel.addons.display.FlxBackdrop;
 import flixel.addons.display.FlxGridOverlay;
 import flixel.addons.display.shapes.FlxShapeCircle;
-import flixel.input.keyboard.FlxKey;
 import flixel.input.gamepad.FlxGamepadInputID;
 import lime.system.Clipboard;
-import flixel.util.FlxGradient;
-import gameplay.notes.StrumNote;
-import gameplay.notes.Note;
 
 import core.graphics.shaders.RGBPalette;
 import core.graphics.shaders.RGBPalette.RGBShaderReference;

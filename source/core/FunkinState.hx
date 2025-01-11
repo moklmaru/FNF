@@ -1,6 +1,5 @@
 package core;
 
-import flixel.FlxState;
 import core.PsychCamera;
 import menu.transition.StickerSprite;
 import menu.transition.StickerSprite.StickerInfo;

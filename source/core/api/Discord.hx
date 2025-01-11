@@ -8,7 +8,6 @@ import lime.app.Application;
 import hxdiscord_rpc.Discord;
 import hxdiscord_rpc.Types;
 
-import flixel.util.FlxStringUtil;
 
 class DiscordClient
 {

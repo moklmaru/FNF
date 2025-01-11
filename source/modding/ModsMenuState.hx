@@ -1,18 +1,11 @@
 package modding;
 
-import core.WeekData;
-import modding.Mods;
 
-import flixel.FlxBasic;
 import flixel.graphics.FlxGraphic;
 import flash.geom.Rectangle;
-import haxe.Json;
 
 import flixel.util.FlxSpriteUtil;
-import menu.common.AttachedSprite;
 import menu.options.ModSettingsSubState;
-import menu.main.MainMenuState;
-import menu.freeplay.FreeplayState;
 import menu.title.TitleState;
 
 import openfl.display.BitmapData;

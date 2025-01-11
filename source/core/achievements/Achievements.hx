@@ -3,7 +3,6 @@ package core.achievements;
 #if ACHIEVEMENTS_ALLOWED
 import core.achievements.AchievementPopup;
 import haxe.Exception;
-import haxe.Json;
 
 #if LUA_ALLOWED
 import modding.psychlua.FunkinLua;

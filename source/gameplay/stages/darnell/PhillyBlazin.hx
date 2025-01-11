@@ -5,10 +5,7 @@ import core.graphics.shaders.RainShader;
 
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.addons.display.FlxTiledSprite;
-
-import gameplay.GameOverSubstate;
 import gameplay.stages.darnell.*;
-import gameplay.notes.Note;
 
 class PhillyBlazin extends BaseStage
 {

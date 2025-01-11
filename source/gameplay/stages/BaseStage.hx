@@ -1,12 +1,6 @@
 package gameplay.stages;
 
-import flixel.FlxBasic;
-import flixel.FlxObject;
-import flixel.FlxSubState;
-import flixel.group.FlxGroup;
 
-import gameplay.notes.Note;
-import gameplay.Character;
 
 enum Countdown
 {

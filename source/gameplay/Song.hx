@@ -1,10 +1,8 @@
 package gameplay;
 
-import haxe.Json;
 import lime.utils.Assets;
 
-import gameplay.notes.Note;
-import gameplay.stages.StageData;
+
 
 typedef SwagSong =
 {

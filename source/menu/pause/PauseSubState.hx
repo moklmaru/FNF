@@ -1,13 +1,6 @@
 package menu.pause;
 
-import core.WeekData;
 import gameplay.score.Highscore;
-import gameplay.Song;
-
-import flixel.util.FlxStringUtil;
-
-import menu.story.StoryMenuState;
-import menu.freeplay.FreeplayState;
 import menu.options.OptionsState;
 
 class PauseSubState extends FunkinSubState

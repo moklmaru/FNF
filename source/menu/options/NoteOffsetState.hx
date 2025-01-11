@@ -1,8 +1,6 @@
 package menu.options;
 
-import gameplay.stages.StageData;
-import gameplay.Character;
-import menu.common.Bar;
+
 import flixel.addons.display.shapes.FlxShapeCircle;
 
 import gameplay.stages.dad.StageWeek1 as BackgroundStage;

@@ -1,8 +1,6 @@
 package gameplay.stages.dad;
 
-import gameplay.stages.BGSprite;
 import gameplay.stages.dad.DadBattleFog;
-import gameplay.Character;
 
 class StageWeek1 extends BaseStage
 {

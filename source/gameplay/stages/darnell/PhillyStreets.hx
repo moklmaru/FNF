@@ -6,10 +6,8 @@ import core.graphics.shaders.RainShader;
 import flixel.addons.display.FlxTiledSprite;
 import flixel.graphics.frames.FlxAtlasFrames;
 
-import gameplay.GameOverSubstate;
 import gameplay.stages.darnell.*;
 
-import gameplay.notes.Note;
 
 import gameplay.cutscenes.CutsceneHandler;
 

@@ -1,15 +1,11 @@
 package modding.editors.content;
 
-import haxe.io.Path;
 import flixel.util.FlxDestroyUtil;
 import flash.net.FileFilter;
 
-import gameplay.stages.StageData;
-import modding.editors.objects.PsychUIButton;
-import modding.editors.objects.PsychUIRadioGroup;
-import modding.editors.objects.PsychUICheckBox;
-import modding.editors.objects.PsychUIEventHandler;
 import modding.editors.content.FileDialogHandler;
+import modding.editors.objects.PsychUIEventHandler;
+import modding.editors.objects.PsychUIRadioGroup;
 
 class PreloadListSubState extends FunkinSubState implements PsychUIEvent
 {

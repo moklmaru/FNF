@@ -2,14 +2,11 @@ package gameplay;
 
 import core.graphics.animation.PsychAnimationController;
 
-import flixel.util.FlxSort;
 import flixel.util.FlxDestroyUtil;
 
-import openfl.utils.AssetType;
 import openfl.utils.Assets;
-import haxe.Json;
+import openfl.utils.AssetType;
 
-import gameplay.Song;
 import gameplay.stages.tank.TankmenBG;
 
 typedef CharacterFile = {

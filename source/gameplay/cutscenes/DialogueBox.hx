@@ -1,7 +1,6 @@
 package gameplay.cutscenes;
 
 import flixel.addons.text.FlxTypeText;
-import gameplay.Song;
 
 class DialogueBox extends FlxSpriteGroup
 {

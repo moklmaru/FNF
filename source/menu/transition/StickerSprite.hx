@@ -1,6 +1,5 @@
 package menu.transition;
 
-import haxe.Json;
 import haxe.ds.Map;
 import openfl.utils.Assets;
 

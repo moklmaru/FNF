@@ -1,8 +1,5 @@
 package gameplay.stages;
 
-import openfl.utils.Assets;
-import haxe.Json;
-import gameplay.Song;
 import modding.psychlua.ModchartSprite;
 
 typedef StageFile = {

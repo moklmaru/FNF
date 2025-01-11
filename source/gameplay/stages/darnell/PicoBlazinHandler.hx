@@ -1,7 +1,5 @@
 package gameplay.stages.darnell;
 
-import gameplay.notes.Note;
-import gameplay.Character;
 
 // Pico Note functions
 class PicoBlazinHandler

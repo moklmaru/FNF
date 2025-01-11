@@ -1,21 +1,15 @@
 package menu.story;
 
-import core.WeekData;
 import gameplay.score.Highscore;
-import gameplay.Song;
 
-import flixel.group.FlxGroup;
 import flixel.graphics.FlxGraphic;
 
 import menu.common.MenuItem;
 import menu.story.MenuCharacter;
-import menu.main.MainMenuState;
-import menu.freeplay.FreeplayState;
 
 import menu.options.GameplayChangersSubstate;
 import gameplay.score.ResetScoreSubState;
 
-import gameplay.stages.StageData;
 
 class StoryMenuState extends FunkinState
 {

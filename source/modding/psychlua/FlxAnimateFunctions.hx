@@ -1,6 +1,5 @@
 package modding.psychlua;
 
-import openfl.utils.Assets;
 
 #if (LUA_ALLOWED && flxanimate)
 class FlxAnimateFunctions

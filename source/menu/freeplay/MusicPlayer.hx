@@ -1,14 +1,9 @@
 package menu.freeplay;
 
-import flixel.group.FlxGroup;
 import flixel.ui.FlxBar;
-import flixel.util.FlxStringUtil;
 
-import menu.freeplay.FreeplayState;
+// Music player used for Freeplay
 
-/**
- * Music player used for Freeplay
- */
 @:access(menu.freeplay.FreeplayState)
 class MusicPlayer extends FlxGroup 
 {
@@ -21,12 +16,12 @@ class MusicPlayer extends FlxGroup
 	public var curTime:Float;
 
 	var songBG:FlxSprite;
-	var songTxt:FlxText;
-	var timeTxt:FlxText;
+	var songText:FlxText;
+	var timeText:FlxText;
 	var progressBar:FlxBar;
 	var playbackBG:FlxSprite;
 	var playbackSymbols:Array<FlxText> = [];
-	var playbackTxt:FlxText;
+	var playbackText:FlxText;
 
 	var wasPlaying:Bool;
 
@@ -50,13 +45,13 @@ class MusicPlayer extends FlxGroup
 		playbackBG.alpha = 0.6;
 		add(playbackBG);
 
-		songTxt = new FlxText(FlxG.width * 0.7, 5, 0, "", 32);
-		songTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
-		add(songTxt);
+		songText = new FlxText(FlxG.width * 0.7, 5, 0, "", 32);
+		songText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
+		add(songText);
 
-		timeTxt = new FlxText(xPos, songTxt.y + 60, 0, "", 32);
-		timeTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
-		add(timeTxt);
+		timeText = new FlxText(xPos, songText.y + 60, 0, "", 32);
+		timeText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
+		add(timeText);
 
 		for (i in 0...2)
 		{
@@ -70,13 +65,13 @@ class MusicPlayer extends FlxGroup
 			add(text);
 		}
 
-		progressBar = new FlxBar(timeTxt.x, timeTxt.y + timeTxt.height, LEFT_TO_RIGHT, Std.int(timeTxt.width), 8, null, "", 0, Math.POSITIVE_INFINITY);
+		progressBar = new FlxBar(timeText.x, timeText.y + timeText.height, LEFT_TO_RIGHT, Std.int(timeText.width), 8, null, "", 0, Math.POSITIVE_INFINITY);
 		progressBar.createFilledBar(FlxColor.WHITE, FlxColor.BLACK);
 		add(progressBar);
 
-		playbackTxt = new FlxText(FlxG.width * 0.6, 20, 0, "", 32);
-		playbackTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE);
-		add(playbackTxt);
+		playbackText = new FlxText(FlxG.width * 0.6, 20, 0, "", 32);
+		playbackText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE);
+		add(playbackText);
 
 		switchPlayMusic();
 	}
@@ -90,11 +85,11 @@ class MusicPlayer extends FlxGroup
 			return;
 		}
 
-		var songName:String = instance.songs[FreeplayState.curSelected].songName;
+		var songName:String = instance.songList[FreeplayState.selectedSong].songName;
 		if (playing && !wasPlaying)
-			songTxt.text = Language.getPhrase('musicplayer_playing', 'PLAYING: {1}', [songName]);
+			songText.text = Language.getPhrase('musicplayer_playing', 'PLAYING: {1}', [songName]);
 		else
-			songTxt.text = Language.getPhrase('musicplayer_paused', 'PLAYING: {1} (PAUSED)', [songName]);
+			songText.text = Language.getPhrase('musicplayer_paused', 'PLAYING: {1} (PAUSED)', [songName]);
 
 		//if(FlxG.keys.justPressed.K) trace('Time: ${FreeplayState.vocals.time}, Playing: ${FreeplayState.vocals.playing}');
 
@@ -246,8 +241,8 @@ class MusicPlayer extends FlxGroup
 		FlxG.autoPause = (!playingMusic && ClientPrefs.data.autoPause);
 		active = visible = playingMusic;
 
-		instance.scoreBG.visible = instance.diffText.visible = instance.scoreText.visible = !playingMusic; //Hide Freeplay texts and boxes if playingMusic is true
-		songTxt.visible = timeTxt.visible = songBG.visible = playbackTxt.visible = playbackBG.visible = progressBar.visible = playingMusic; //Show Music Player texts and boxes if playingMusic is true
+		instance.scoreBG.visible = instance.difficultyText.visible = instance.scoreText.visible = !playingMusic; //Hide Freeplay texts and boxes if playingMusic is true
+		songText.visible = timeText.visible = songBG.visible = playbackText.visible = playbackBG.visible = progressBar.visible = playingMusic; //Show Music Player texts and boxes if playingMusic is true
 
 		for (i in playbackSymbols)
 			i.visible = playingMusic;
@@ -257,8 +252,7 @@ class MusicPlayer extends FlxGroup
 		playbackRate = 1;
 		updatePlaybackTxt();
 
-		if (playingMusic)
-		{
+		if (playingMusic) {
 			instance.bottomText.text = Language.getPhrase('musicplayer_tip', 'Press SPACE to Pause / Press ESCAPE to Exit / Press R to Reset the Song');
 			positionSong();
 			
@@ -274,7 +268,6 @@ class MusicPlayer extends FlxGroup
 			progressBar.setParent(null, "");
 			progressBar.numDivisions = 0;
 
-			instance.bottomText.text = instance.bottomString;
 			instance.positionHighscore();
 		}
 		progressBar.updateBar();
@@ -293,35 +286,35 @@ class MusicPlayer extends FlxGroup
 
 			text = playbackRate;
 		}
-		playbackTxt.text = text + 'x';
+		playbackText.text = text + 'x';
 	}
 
 	function positionSong() 
 	{
-		var length:Int = instance.songs[FreeplayState.curSelected].songName.length;
+		var length:Int = instance.songList[FreeplayState.selectedSong].songName.length;
 		var shortName:Bool = length < 5; // Fix for song names like Ugh, Guns
-		songTxt.x = FlxG.width - songTxt.width - 6;
+		songText.x = FlxG.width - songText.width - 6;
 		if (shortName)
-			songTxt.x -= 10 * length - length;
-		songBG.scale.x = FlxG.width - songTxt.x + 12;
+			songText.x -= 10 * length - length;
+		songBG.scale.x = FlxG.width - songText.x + 12;
 		if (shortName) 
 			songBG.scale.x += 6 * length;
 		songBG.x = FlxG.width - (songBG.scale.x / 2);
-		timeTxt.x = Std.int(songBG.x + (songBG.width / 2));
-		timeTxt.x -= timeTxt.width / 2;
+		timeText.x = Std.int(songBG.x + (songBG.width / 2));
+		timeText.x -= timeText.width / 2;
 		if (shortName)
-			timeTxt.x -= length - 5;
+			timeText.x -= length - 5;
 
-		playbackBG.scale.x = playbackTxt.width + 30;
+		playbackBG.scale.x = playbackText.width + 30;
 		playbackBG.x = songBG.x - (songBG.scale.x / 2);
 		playbackBG.x -= playbackBG.scale.x;
 
-		playbackTxt.x = playbackBG.x - playbackTxt.width / 2;
-		playbackTxt.y = playbackTxt.height;
+		playbackText.x = playbackBG.x - playbackText.width / 2;
+		playbackText.y = playbackText.height;
 
-		progressBar.setGraphicSize(Std.int(songTxt.width), 5);
-		progressBar.y = songTxt.y + songTxt.height + 10;
-		progressBar.x = songTxt.x + songTxt.width / 2 - 15;
+		progressBar.setGraphicSize(Std.int(songText.width), 5);
+		progressBar.y = songText.y + songText.height + 10;
+		progressBar.x = songText.x + songText.width / 2 - 15;
 		if (shortName)
 		{
 			progressBar.scale.x += length / 2;
@@ -331,20 +324,20 @@ class MusicPlayer extends FlxGroup
 		for (i in 0...2)
 		{
 			var text = playbackSymbols[i];
-			text.x = playbackTxt.x + playbackTxt.width / 2 - 10;
-			text.y = playbackTxt.y;
+			text.x = playbackText.x + playbackText.width / 2 - 10;
+			text.y = playbackText.y;
 
 			if (i == 0)
-				text.y -= playbackTxt.height;
+				text.y -= playbackText.height;
 			else
-				text.y += playbackTxt.height;
+				text.y += playbackText.height;
 		}
 	}
 
 	function updateTimeTxt()
 	{
 		var text = FlxStringUtil.formatTime(FlxG.sound.music.time / 1000, false) + ' / ' + FlxStringUtil.formatTime(FlxG.sound.music.length / 1000, false);
-		timeTxt.text = '< ' + text + ' >';
+		timeText.text = '< ' + text + ' >';
 	}
 
 	function setPlaybackRate() 

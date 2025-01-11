@@ -1,7 +1,5 @@
 package menu.credits;
 
-import menu.common.AttachedSprite;
-import menu.main.MainMenuState;
 
 class CreditsState extends FunkinState
 {

@@ -1,6 +1,5 @@
 package gameplay;
 
-import core.WeekData;
 
 class Difficulty
 {

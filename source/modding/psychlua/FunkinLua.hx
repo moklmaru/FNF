@@ -1,16 +1,10 @@
 #if LUA_ALLOWED
 package modding.psychlua;
 
-import core.WeekData;
 import gameplay.score.Highscore;
-import gameplay.Song;
 
 import openfl.Lib;
-import openfl.utils.Assets;
 import openfl.display.BitmapData;
-import flixel.FlxBasic;
-import flixel.FlxObject;
-import flixel.FlxState;
 
 #if (!flash && sys)
 import flixel.addons.display.FlxRuntimeShader;
@@ -18,17 +12,8 @@ import flixel.addons.display.FlxRuntimeShader;
 
 import gameplay.cutscenes.DialogueBoxPsych;
 
-import gameplay.notes.StrumNote;
-import gameplay.notes.Note;
-import gameplay.notes.NoteSplash;
-import gameplay.Character;
-
-import menu.main.MainMenuState;
-import menu.story.StoryMenuState;
-import menu.freeplay.FreeplayState;
 
 import menu.pause.PauseSubState;
-import gameplay.GameOverSubstate;
 
 import modding.psychlua.LuaUtils;
 import modding.psychlua.LuaUtils.LuaTweenOptions;
@@ -38,10 +23,8 @@ import modding.psychlua.HScript;
 import modding.psychlua.DebugLuaText;
 import modding.psychlua.ModchartSprite;
 
-import flixel.input.keyboard.FlxKey;
 import flixel.input.gamepad.FlxGamepadInputID;
 
-import haxe.Json;
 
 class FunkinLua {
 	public var lua:State = null;

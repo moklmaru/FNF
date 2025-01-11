@@ -1,14 +1,11 @@
 package menu.main;
 
-import flixel.FlxObject;
 import flixel.effects.FlxFlicker;
 import lime.app.Application;
 import modding.editors.MasterEditorMenu;
 import menu.options.OptionsState;
 import menu.title.TitleState;
-import menu.story.StoryMenuState;
 import menu.credits.CreditsState;
-import menu.freeplay.FreeplayState;
 import modding.ModsMenuState;
 import core.achievements.AchievementsMenuState;
 

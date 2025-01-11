@@ -1,6 +1,5 @@
 package core.debug;
 
-import haxe.io.Path;
 
 /*
 A class that simply points OpenALSoft to a custom configuration file when the game starts up.

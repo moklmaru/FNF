@@ -1,7 +1,5 @@
 package core;
 
-import gameplay.Song;
-import gameplay.notes.Note;
 import gameplay.score.Rating;
 
 typedef BPMChangeEvent =

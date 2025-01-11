@@ -1,6 +1,5 @@
 package menu.options;
 
-import openfl.utils.Assets;
 
 class LanguageSubState extends FunkinSubState
 {

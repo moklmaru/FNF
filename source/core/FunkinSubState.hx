@@ -1,6 +1,5 @@
 package core;
 
-import flixel.FlxSubState;
 
 class FunkinSubState extends FlxSubState
 {

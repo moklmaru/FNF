@@ -1,6 +1,5 @@
 package modding.psychlua;
 
-import flixel.FlxObject;
 
 class CustomSubstate extends FunkinSubState
 {

@@ -1,6 +1,5 @@
 package modding.editors.content;
 
-import gameplay.notes.Note;
 import core.graphics.shaders.RGBPalette;
 import flixel.util.FlxDestroyUtil;
 

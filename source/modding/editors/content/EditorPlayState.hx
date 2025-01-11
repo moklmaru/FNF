@@ -1,14 +1,8 @@
 package modding.editors.content;
 
-import gameplay.Song;
 import gameplay.score.Rating;
 
-import gameplay.notes.*;
-
-import flixel.util.FlxSort;
-import flixel.util.FlxStringUtil;
 import flixel.animation.FlxAnimationController;
-import flixel.input.keyboard.FlxKey;
 import openfl.events.KeyboardEvent;
 
 class EditorPlayState extends FunkinSubState

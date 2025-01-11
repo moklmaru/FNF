@@ -1,25 +1,16 @@
 package menu.transition;
 
-import haxe.Json;
 import lime.utils.Assets;
 import openfl.display.BitmapData;
 import openfl.utils.AssetType;
 import openfl.utils.Assets as OpenFlAssets;
 import flixel.graphics.FlxGraphic;
 import flixel.system.FlxAssets;
-import flixel.FlxState;
 
 import flash.media.Sound;
 
-import gameplay.Song;
-import gameplay.stages.StageData;
-import gameplay.Character;
-
 import sys.thread.Thread;
 import sys.thread.Mutex;
-
-import gameplay.notes.Note;
-import gameplay.notes.NoteSplash;
 
 class LoadingState extends FunkinState
 {
@@ -637,13 +628,12 @@ class LoadingState extends FunkinState
 		return Paths.currentTrackedSounds.get(file);
 	}
 
-	// thread safe sound loader
 	static function preloadGraphic(key:String):Null<BitmapData>
 	{
 		try {
 			var requestKey:String = 'images/$key';
 			#if TRANSLATIONS_ALLOWED requestKey = Language.getFileTranslation(requestKey); #end
-			if(requestKey.lastIndexOf('.') < 0) requestKey += '.png';
+			if (!requestKey.endsWith(".png")) requestKey += '.png';
 
 			if (!Paths.currentTrackedAssets.exists(requestKey))
 			{

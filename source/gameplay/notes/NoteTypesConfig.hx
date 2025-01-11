@@ -1,6 +1,5 @@
 package gameplay.notes;
 
-import gameplay.notes.Note;
 
 typedef NoteTypeProperty = {
 	property:Array<String>,

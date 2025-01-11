@@ -1,8 +1,6 @@
 package gameplay.stages.weeb;
 
 import flixel.addons.effects.FlxTrail;
-import gameplay.stages.BGSprite;
-import gameplay.GameOverSubstate;
 import gameplay.cutscenes.DialogueBox;
 import openfl.utils.Assets as OpenFlAssets;
 

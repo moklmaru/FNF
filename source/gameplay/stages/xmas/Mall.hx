@@ -1,6 +1,5 @@
 package gameplay.stages.xmas;
 
-import gameplay.stages.BGSprite;
 import gameplay.stages.xmas.MallCrowd;
 
 class Mall extends BaseStage

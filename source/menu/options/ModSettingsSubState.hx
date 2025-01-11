@@ -1,9 +1,7 @@
 package menu.options;
 
-import flixel.input.keyboard.FlxKey;
 import flixel.input.gamepad.FlxGamepadInputID;
 
-import gameplay.Character;
 
 import menu.options.Option.OptionType;
 

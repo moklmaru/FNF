@@ -1,23 +1,11 @@
 package menu.transition;
 
-import haxe.Json;
 import haxe.ds.Map;
 import haxe.ds.StringMap;
-import flixel.group.FlxGroup.FlxTypedGroup;
-import flixel.math.FlxMath;
-import flixel.util.FlxGradient;
-import flixel.util.FlxTimer;
-import flixel.util.FlxSort;
-import flixel.addons.transition.FlxTransitionableState;
 import openfl.display.Sprite;
 import openfl.geom.Matrix;
 import openfl.utils.Assets;
-import core.FunkinState;
-import core.FunkinSubState;
-import core.util.Paths;
 import menu.transition.StickerSprite;
-import menu.transition.StickerSprite.StickerInfo;
-import menu.transition.StickerSprite.StickerData;
 
 class TransitionSubState extends FunkinSubState {
 	public static var finishCallback:Void->Void;

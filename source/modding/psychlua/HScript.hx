@@ -1,7 +1,5 @@
 package modding.psychlua;
 
-import flixel.FlxBasic;
-import gameplay.Character;
 import modding.psychlua.LuaUtils;
 import modding.psychlua.CustomSubstate;
 

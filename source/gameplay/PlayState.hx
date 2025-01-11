@@ -1,28 +1,16 @@
 package gameplay;
 
-import gameplay.score.Highscore;
-import gameplay.stages.StageData;
-import core.WeekData;
-import gameplay.Song;
-import gameplay.score.Rating;
-import gameplay.notes.*;
-import gameplay.hud.HealthIcon;
-import menu.common.Bar;
-
-import flixel.FlxBasic;
-import flixel.FlxObject;
-import flixel.FlxSubState;
-import flixel.util.FlxSort;
-import flixel.util.FlxStringUtil;
-import flixel.util.FlxSave;
-import flixel.input.keyboard.FlxKey;
 import flixel.animation.FlxAnimationController;
+
 import lime.utils.Assets;
 import openfl.utils.Assets as OpenFlAssets;
 import openfl.events.KeyboardEvent;
-import haxe.Json;
 
+import gameplay.score.Highscore;
+import gameplay.score.Rating;
+import gameplay.hud.HealthIcon;
 import gameplay.cutscenes.DialogueBoxPsych;
+import gameplay.cutscenes.VideoSprite;
 
 import gameplay.stages.dad.StageWeek1;
 import gameplay.stages.spooky.Spooky;
@@ -36,22 +24,15 @@ import gameplay.stages.tank.Tank;
 import gameplay.stages.darnell.PhillyStreets;
 import gameplay.stages.darnell.PhillyBlazin;
 
-import menu.story.StoryMenuState;
-import menu.freeplay.FreeplayState;
 import modding.editors.ChartingState;
 import modding.editors.CharacterEditorState;
 
 import menu.pause.PauseSubState;
-import gameplay.GameOverSubstate;
 
 #if !flash
 import flixel.addons.display.FlxRuntimeShader;
 import openfl.filters.ShaderFilter;
 #end
-
-import gameplay.cutscenes.VideoSprite;
-
-import gameplay.notes.Note.EventNote;
 
 #if LUA_ALLOWED
 import modding.psychlua.*;

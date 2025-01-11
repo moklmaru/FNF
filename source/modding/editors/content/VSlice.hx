@@ -1,11 +1,6 @@
 package modding.editors.content;
 
-import gameplay.Song;
-import gameplay.Difficulty;
-import menu.main.MainMenuState;
 
-import flixel.math.FlxMath;
-import flixel.util.FlxSort;
 
 // Chart
 typedef VSliceChart =

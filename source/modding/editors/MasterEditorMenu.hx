@@ -1,11 +1,7 @@
 package modding.editors;
 
-import core.WeekData;
 
-import gameplay.Character;
 
-import menu.main.MainMenuState;
-import menu.freeplay.FreeplayState;
 
 class MasterEditorMenu extends FunkinState
 {

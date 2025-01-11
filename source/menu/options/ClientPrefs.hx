@@ -1,7 +1,5 @@
 package menu.options;
 
-import flixel.util.FlxSave;
-import flixel.input.keyboard.FlxKey;
 import flixel.input.gamepad.FlxGamepadInputID;
 
 import menu.title.TitleState;

@@ -1,10 +1,6 @@
 package modding.editors;
 
-import openfl.net.FileReference;
-import openfl.events.Event;
-import openfl.events.IOErrorEvent;
 import flash.net.FileFilter;
-import haxe.Json;
 import lime.system.Clipboard;
 
 import gameplay.cutscenes.TypedAlphabet;

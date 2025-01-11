@@ -1,7 +1,5 @@
 package gameplay.stages.xmas;
 
-import gameplay.stages.BGSprite;
-
 class MallEvil extends BaseStage
 {
 	override function create()

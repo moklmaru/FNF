@@ -1,6 +1,5 @@
 package menu.title;
 
-import flixel.FlxSubState;
 
 import flixel.effects.FlxFlicker;
 import lime.app.Application;

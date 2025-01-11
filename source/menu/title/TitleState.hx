@@ -1,13 +1,9 @@
 package menu.title;
 
-import core.WeekData;
 
-import flixel.input.keyboard.FlxKey;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.graphics.frames.FlxFrame;
-import flixel.group.FlxGroup;
 import flixel.input.gamepad.FlxGamepad;
-import haxe.Json;
 
 import openfl.Assets;
 import openfl.display.Bitmap;
@@ -15,9 +11,6 @@ import openfl.display.BitmapData;
 
 import core.graphics.shaders.ColorSwap;
 
-import menu.story.StoryMenuState;
-import menu.main.MainMenuState;
-import menu.freeplay.FreeplayState;
 
 typedef TitleData =
 {

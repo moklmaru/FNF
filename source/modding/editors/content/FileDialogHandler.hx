@@ -1,15 +1,11 @@
 package modding.editors.content;
 
-import openfl.net.FileReference;
-import openfl.events.Event;
-import openfl.events.IOErrorEvent;
 import flash.net.FileFilter;
 
 import haxe.Exception;
 import sys.io.File;
 import lime.ui.*;
 
-import flixel.FlxBasic;
 
 //Currently only supports OPEN and SAVE, might change that in the future, who knows
 class FileDialogHandler extends FlxBasic

@@ -1,12 +1,9 @@
 package modding.psychlua;
 
-import core.WeekData;
-import gameplay.Character;
 
 import openfl.display.BlendMode;
 import Type.ValueType;
 
-import gameplay.GameOverSubstate;
 
 typedef LuaTweenOptions = {
 	type:FlxTweenType,

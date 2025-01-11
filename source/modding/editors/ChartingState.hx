@@ -1,12 +1,7 @@
 package modding.editors;
 
-import flixel.FlxSubState;
-import flixel.util.FlxSave;
-import flixel.util.FlxSort;
 import flixel.util.FlxSpriteUtil;
-import flixel.util.FlxStringUtil;
 import flixel.util.FlxDestroyUtil;
-import flixel.input.keyboard.FlxKey;
 
 import lime.utils.Assets;
 import lime.media.AudioBuffer;
@@ -14,7 +9,6 @@ import lime.media.AudioBuffer;
 import flash.media.Sound;
 import flash.geom.Rectangle;
 
-import haxe.Json;
 import haxe.Exception;
 import haxe.io.Bytes;
 
@@ -23,15 +17,9 @@ import modding.editors.content.VSlice;
 import modding.editors.content.Prompt;
 import modding.editors.content.*;
 
-import gameplay.Song;
-import gameplay.stages.StageData;
 import gameplay.score.Highscore;
-import gameplay.Difficulty;
 
-import gameplay.Character;
 import gameplay.hud.HealthIcon;
-import gameplay.notes.Note;
-import gameplay.notes.StrumNote;
 
 using DateTools;
 

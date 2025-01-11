@@ -1,5 +1,6 @@
 package core;
 
+
 class Language
 {
 	public static var defaultLangName:String = 'English (US)'; //en-US

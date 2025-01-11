@@ -1,16 +1,8 @@
 package gameplay.notes;
 
 import core.graphics.animation.PsychAnimationController;
-import gameplay.notes.NoteTypesConfig;
-
 import core.graphics.shaders.RGBPalette;
 import core.graphics.shaders.RGBPalette.RGBShaderReference;
-
-import gameplay.notes.StrumNote;
-
-import flixel.math.FlxRect;
-
-using StringTools;
 
 typedef EventNote = {
 	strumTime:Float,

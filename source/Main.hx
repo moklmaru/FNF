@@ -8,12 +8,9 @@ import core.debug.FPSCounter;
 
 import flixel.graphics.FlxGraphic;
 import flixel.FlxGame;
-import flixel.FlxState;
-import haxe.io.Path;
 import openfl.Assets;
 import openfl.Lib;
 import openfl.display.Sprite;
-import openfl.events.Event;
 import openfl.display.StageScaleMode;
 import lime.app.Application;
 import menu.title.TitleState;
@@ -30,7 +27,6 @@ import core.debug.ALSoftConfig; // Just to make sure DCE doesn't remove this, si
 #if CRASH_HANDLER
 import openfl.events.UncaughtErrorEvent;
 import haxe.CallStack;
-import haxe.io.Path;
 #end
 
 import gameplay.score.Highscore;

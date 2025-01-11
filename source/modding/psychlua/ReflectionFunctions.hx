@@ -3,7 +3,6 @@ package modding.psychlua;
 import Type.ValueType;
 import haxe.Constraints;
 
-import gameplay.GameOverSubstate;
 
 //
 // Functions that use a high amount of Reflections, which are somewhat CPU intensive

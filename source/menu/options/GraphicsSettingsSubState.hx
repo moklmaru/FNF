@@ -1,6 +1,5 @@
 package menu.options;
 
-import gameplay.Character;
 
 class GraphicsSettingsSubState extends BaseOptionsMenu
 {

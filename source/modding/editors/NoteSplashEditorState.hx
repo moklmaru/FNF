@@ -1,13 +1,7 @@
 package modding.editors;
 
-import gameplay.notes.*;
 import openfl.net.FileFilter;
 import flixel.group.FlxSpriteGroup.FlxTypedSpriteGroup;
-import flixel.input.keyboard.FlxKey;
-import openfl.events.Event;
-import openfl.events.IOErrorEvent;
-import openfl.net.FileReference;
-import haxe.Json;
 import gameplay.notes.NoteSplash.NoteSplashConfig;
 
 @:access(gameplay.notes.NoteSplash)

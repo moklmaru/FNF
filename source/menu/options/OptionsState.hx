@@ -1,7 +1,6 @@
 package menu.options;
 
-import menu.main.MainMenuState;
-import gameplay.stages.StageData;
+
 
 class OptionsState extends FunkinState
 {
