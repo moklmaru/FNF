@@ -19,7 +19,7 @@ import openfl.utils.Assets;
 
 import haxe.Json;
 
-class FreeplayState extends MusicBeatState
+class FreeplayState extends FunkinState
 {
 	var songs:Array<SongMetadata> = [];
 
@@ -72,9 +72,9 @@ class FreeplayState extends MusicBeatState
 		{
 			FlxTransitionableState.skipNextTransIn = true;
 			persistentUpdate = false;
-			MusicBeatState.switchState(new core.debug.ErrorState("NO WEEKS ADDED FOR FREEPLAY\n\nPress ACCEPT to go to the Week Editor Menu.\nPress BACK to return to Main Menu.",
-				function() MusicBeatState.switchState(new modding.editors.WeekEditorState()),
-				function() MusicBeatState.switchState(new menu.main.MainMenuState())));
+			FunkinState.switchState(new core.debug.ErrorState("NO WEEKS ADDED FOR FREEPLAY\n\nPress ACCEPT to go to the Week Editor Menu.\nPress BACK to return to Main Menu.",
+				function() FunkinState.switchState(new modding.editors.WeekEditorState()),
+				function() FunkinState.switchState(new menu.main.MainMenuState())));
 			return;
 		}
 
@@ -321,7 +321,7 @@ class FreeplayState extends MusicBeatState
 			{
 				persistentUpdate = false;
 				FlxG.sound.play(Paths.sound('cancelMenu'));
-				MusicBeatState.switchState(new MainMenuState());
+				FunkinState.switchState(new MainMenuState());
 			}
 		}
 

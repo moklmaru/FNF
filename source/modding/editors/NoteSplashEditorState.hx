@@ -11,7 +11,7 @@ import haxe.Json;
 import gameplay.notes.NoteSplash.NoteSplashConfig;
 
 @:access(gameplay.notes.NoteSplash)
-class NoteSplashEditorState extends MusicBeatState
+class NoteSplashEditorState extends FunkinState
 {
     var strums:FlxTypedSpriteGroup<StrumNote> = new FlxTypedSpriteGroup();
     var splashes:FlxTypedSpriteGroup<NoteSplash> = new FlxTypedSpriteGroup();
@@ -595,7 +595,7 @@ class NoteSplashEditorState extends MusicBeatState
         if (!blockInput)
         {
             if (controls.BACK)
-                MusicBeatState.switchState(new MasterEditorMenu());
+                FunkinState.switchState(new MasterEditorMenu());
             if (FlxG.keys.justPressed.F1)
                 openSubState(new NoteSplashEditorHelpSubState());
         }
@@ -992,7 +992,7 @@ class NoteSplashEditorState extends MusicBeatState
 }
 
 
-class NoteSplashEditorHelpSubState extends MusicBeatSubstate
+class NoteSplashEditorHelpSubState extends FunkinSubState
 {
     public function new()
     {

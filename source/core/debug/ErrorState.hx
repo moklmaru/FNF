@@ -1,6 +1,6 @@
 package core.debug;
 
-class ErrorState extends MusicBeatState
+class ErrorState extends FunkinState
 {
 	public var acceptCallback:Void->Void;
 	public var backCallback:Void->Void;

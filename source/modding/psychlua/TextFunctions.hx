@@ -14,7 +14,7 @@ class TextFunctions
 			if(PlayState.instance != null) leText.cameras = [PlayState.instance.camHUD];
 			leText.scrollFactor.set();
 			leText.borderSize = 2;
-			MusicBeatState.getVariables().set(tag, leText);
+			FunkinState.getVariables().set(tag, leText);
 		});
 
 		Lua_helper.add_callback(lua, "setTextString", function(tag:String, text:String) {
@@ -183,11 +183,11 @@ class TextFunctions
 		});
 
 		Lua_helper.add_callback(lua, "addLuaText", function(tag:String) {
-			var text:FlxText = MusicBeatState.getVariables().get(tag);
+			var text:FlxText = FunkinState.getVariables().get(tag);
 			if(text != null) LuaUtils.getTargetInstance().add(text);
 		});
 		Lua_helper.add_callback(lua, "removeLuaText", function(tag:String, destroy:Bool = true) {
-			var variables = MusicBeatState.getVariables();
+			var variables = FunkinState.getVariables();
 			var text:FlxText = variables.get(tag);
 			if(text == null) return;
 

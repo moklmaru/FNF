@@ -3,7 +3,7 @@ package core.debug;
 import menu.main.MainMenuState;
 import menu.title.TitleState;
 
-class OutdatedState extends MusicBeatState
+class OutdatedState extends FunkinState
 {
 	public static var leftState:Bool = false;
 
@@ -44,7 +44,7 @@ class OutdatedState extends MusicBeatState
 				FlxG.sound.play(Paths.sound('cancelMenu'));
 				FlxTween.tween(warnText, {alpha: 0}, 1, {
 					onComplete: function (twn:FlxTween) {
-						MusicBeatState.switchState(new MainMenuState());
+						FunkinState.switchState(new MainMenuState());
 					}
 				});
 			}

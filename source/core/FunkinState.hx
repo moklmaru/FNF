@@ -6,7 +6,7 @@ import menu.transition.StickerSprite;
 import menu.transition.StickerSprite.StickerInfo;
 import menu.transition.StickerSprite.StickerData;
 
-class MusicBeatState extends FlxState
+class FunkinState extends FlxState
 {
 	private var curSection:Int = 0;
 	private var stepsToDo:Int = 0;
@@ -41,9 +41,9 @@ class MusicBeatState extends FlxState
 		if (!skip) {
 			// trace('transition part 2');
 			if (isStickerTransition) {
-				openSubState(new TransitionSubstate(0.5, true, true, stickerData));
+				openSubState(new TransitionSubState(0.5, true, true, stickerData));
 			} else {
-				openSubState(new TransitionSubstate(0.5, true, false));
+				openSubState(new TransitionSubState(0.5, true, false));
 			}
 		}
 		FlxTransitionableState.skipNextTransOut = false;
@@ -167,16 +167,16 @@ class MusicBeatState extends FlxState
 		if (nextState == null)
 			nextState = FlxG.state;
 
-		FlxG.state.openSubState(new TransitionSubstate(0.5, false, isStickerTransition));
+		FlxG.state.openSubState(new TransitionSubState(0.5, false, isStickerTransition));
 
 		if (nextState == FlxG.state)
-			TransitionSubstate.finishCallback = function() FlxG.resetState();
+			TransitionSubState.finishCallback = function() FlxG.resetState();
 		else
-			TransitionSubstate.finishCallback = function() FlxG.switchState(nextState);
+			TransitionSubState.finishCallback = function() FlxG.switchState(nextState);
 	}
 
-	public static function getState():MusicBeatState {
-		return cast (FlxG.state, MusicBeatState);
+	public static function getState():FunkinState {
+		return cast (FlxG.state, FunkinState);
 	}
 
 	public function stepHit():Void

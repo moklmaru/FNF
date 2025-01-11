@@ -26,7 +26,7 @@ import flash.net.FileFilter;
 import modding.editors.content.Prompt;
 import modding.editors.content.PreloadListSubState;
 
-class StageEditorState extends MusicBeatState implements PsychUIEventHandler.PsychUIEvent
+class StageEditorState extends FunkinState implements PsychUIEventHandler.PsychUIEvent
 {
 	final minZoom = 0.1;
 	final maxZoom = 2;
@@ -629,7 +629,7 @@ class StageEditorState extends MusicBeatState implements PsychUIEventHandler.Psy
 			stageJson.directory = selected;
 			saveObjectsToJson();
 			FlxTransitionableState.skipNextTransIn = FlxTransitionableState.skipNextTransOut = true;
-			MusicBeatState.switchState(new StageEditorState(lastLoadedStage, stageJson));
+			FunkinState.switchState(new StageEditorState(lastLoadedStage, stageJson));
 		});
 		directoryDropDown.selectedLabel = stageJson.directory;
 
@@ -1351,7 +1351,7 @@ class StageEditorState extends MusicBeatState implements PsychUIEventHandler.Psy
 		{
 			if(!unsavedProgress)
 			{
-				MusicBeatState.switchState(new modding.editors.MasterEditorMenu());
+				FunkinState.switchState(new modding.editors.MasterEditorMenu());
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			}
 			else openSubState(new ExitConfirmationPrompt());
@@ -1986,7 +1986,7 @@ class StageEditorMetaSprite
 	}
 }
 
-class StageEditorAnimationSubstate extends MusicBeatSubstate {
+class StageEditorAnimationSubstate extends FunkinSubState {
 	var bg:FlxSprite;
 	var originalZoom:Float;
 	var originalCamPoint:FlxPoint;

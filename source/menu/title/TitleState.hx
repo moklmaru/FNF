@@ -37,7 +37,7 @@ typedef TitleData =
 	@:optional var idle:Bool;
 }
 
-class TitleState extends MusicBeatState
+class TitleState extends FunkinState
 {
 	public static var muteKeys:Array<FlxKey> = [FlxKey.ZERO];
 	public static var volumeDownKeys:Array<FlxKey> = [FlxKey.NUMPADMINUS, FlxKey.MINUS];
@@ -126,15 +126,15 @@ class TitleState extends MusicBeatState
 
 		FlxG.mouse.visible = false;
 		#if FREEPLAY
-		MusicBeatState.switchState(new FreeplayState());
+		FunkinState.switchState(new FreeplayState());
 		#elseif CHARTING
-		MusicBeatState.switchState(new ChartingState());
+		FunkinState.switchState(new ChartingState());
 		#else
 		if(FlxG.save.data.flashing == null && !FlashingState.leftState)
 		{
 			FlxTransitionableState.skipNextTransIn = true;
 			FlxTransitionableState.skipNextTransOut = true;
-			MusicBeatState.switchState(new FlashingState());
+			FunkinState.switchState(new FlashingState());
 		}
 		else
 		{
@@ -424,9 +424,9 @@ class TitleState extends MusicBeatState
 				new FlxTimer().start(1, function(tmr:FlxTimer)
 				{
 					if (mustUpdate)
-						MusicBeatState.switchState(new OutdatedState());
+						FunkinState.switchState(new OutdatedState());
 					else
-						MusicBeatState.switchState(new MainMenuState());
+						FunkinState.switchState(new MainMenuState());
 
 					closedState = true;
 				});
@@ -466,7 +466,7 @@ class TitleState extends MusicBeatState
 								function(twn:FlxTween) {
 									FlxTransitionableState.skipNextTransIn = true;
 									FlxTransitionableState.skipNextTransOut = true;
-									MusicBeatState.switchState(new TitleState());
+									FunkinState.switchState(new TitleState());
 								}
 							});
 							FlxG.sound.music.fadeOut();
@@ -489,7 +489,7 @@ class TitleState extends MusicBeatState
 		if (initialized && !skippedIntro) // will automatically skip directly into freeplay for now
 		{
 			skipIntro();
-			MusicBeatState.switchState(new FreeplayState());
+			FunkinState.switchState(new FreeplayState());
 		}
 
 		if (initialized && pressedEnter && !skippedIntro)

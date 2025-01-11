@@ -2,7 +2,7 @@ package core;
 
 import flixel.FlxSubState;
 
-class MusicBeatSubstate extends FlxSubState
+class FunkinSubState extends FlxSubState
 {
 	public function new()
 	{
@@ -28,7 +28,7 @@ class MusicBeatSubstate extends FlxSubState
 	override function update(elapsed:Float)
 	{
 		//everyStep();
-		if(!persistentUpdate) MusicBeatState.timePassedOnState += elapsed;
+		if(!persistentUpdate) FunkinState.timePassedOnState += elapsed;
 		var oldStep:Int = curStep;
 
 		updateCurStep();

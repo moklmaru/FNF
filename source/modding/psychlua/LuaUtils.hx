@@ -45,9 +45,9 @@ class LuaUtils
 		if(splitProps.length > 1)
 		{
 			var target:Dynamic = null;
-			if(MusicBeatState.getVariables().exists(splitProps[0]))
+			if(FunkinState.getVariables().exists(splitProps[0]))
 			{
-				var retVal:Dynamic = MusicBeatState.getVariables().get(splitProps[0]);
+				var retVal:Dynamic = FunkinState.getVariables().get(splitProps[0]);
 				if(retVal != null)
 					target = retVal;
 			}
@@ -71,9 +71,9 @@ class LuaUtils
 			return value;
 		}
 
-		if(MusicBeatState.getVariables().exists(variable))
+		if(FunkinState.getVariables().exists(variable))
 		{
-			MusicBeatState.getVariables().set(variable, value);
+			FunkinState.getVariables().set(variable, value);
 			return value;
 		}
 		Reflect.setProperty(instance, variable, value);
@@ -85,9 +85,9 @@ class LuaUtils
 		if(splitProps.length > 1)
 		{
 			var target:Dynamic = null;
-			if(MusicBeatState.getVariables().exists(splitProps[0]))
+			if(FunkinState.getVariables().exists(splitProps[0]))
 			{
-				var retVal:Dynamic = MusicBeatState.getVariables().get(splitProps[0]);
+				var retVal:Dynamic = FunkinState.getVariables().get(splitProps[0]);
 				if(retVal != null)
 					target = retVal;
 			}
@@ -108,9 +108,9 @@ class LuaUtils
 			return instance.get(variable);
 		}
 
-		if(MusicBeatState.getVariables().exists(variable))
+		if(FunkinState.getVariables().exists(variable))
 		{
-			var retVal:Dynamic = MusicBeatState.getVariables().get(variable);
+			var retVal:Dynamic = FunkinState.getVariables().get(variable);
 			if(retVal != null)
 				return retVal;
 		}
@@ -249,8 +249,8 @@ class LuaUtils
 				return PlayState.instance;
 			
 			default:
-				var obj:Dynamic = MusicBeatState.getVariables().get(objectName);
-				if(obj == null) obj = getVarInArray(MusicBeatState.getState(), objectName, allowMaps);
+				var obj:Dynamic = FunkinState.getVariables().get(objectName);
+				if(obj == null) obj = getVarInArray(FunkinState.getState(), objectName, allowMaps);
 				return obj;
 		}
 	}
@@ -267,7 +267,7 @@ class LuaUtils
 	public static function getTargetInstance()
 	{
 		if(PlayState.instance != null) return PlayState.instance.isDead ? GameOverSubstate.instance : PlayState.instance;
-		return MusicBeatState.getState();
+		return FunkinState.getState();
 	}
 
 	public static inline function getLowestCharacterGroup():FlxSpriteGroup
@@ -347,7 +347,7 @@ class LuaUtils
 	}
 
 	public static function destroyObject(tag:String) {
-		var variables = MusicBeatState.getVariables();
+		var variables = FunkinState.getVariables();
 		var obj:FlxSprite = variables.get(tag);
 		if(obj == null || obj.destroy == null)
 			return;
@@ -359,7 +359,7 @@ class LuaUtils
 
 	public static function cancelTween(tag:String) {
 		if(!tag.startsWith('tween_')) tag = 'tween_' + LuaUtils.formatVariable(tag);
-		var variables = MusicBeatState.getVariables();
+		var variables = FunkinState.getVariables();
 		var twn:FlxTween = variables.get(tag);
 		if(twn != null)
 		{
@@ -371,7 +371,7 @@ class LuaUtils
 
 	public static function cancelTimer(tag:String) {
 		if(!tag.startsWith('timer_')) tag = 'timer_' + LuaUtils.formatVariable(tag);
-		var variables = MusicBeatState.getVariables();
+		var variables = FunkinState.getVariables();
 		var tmr:FlxTimer = variables.get(tag);
 		if(tmr != null)
 		{
@@ -509,7 +509,7 @@ class LuaUtils
 			case 'camhud' | 'hud': return PlayState.instance.camHUD;
 			case 'camother' | 'other': return PlayState.instance.camOther;
 		}
-		var camera:FlxCamera = MusicBeatState.getVariables().get(cam);
+		var camera:FlxCamera = FunkinState.getVariables().get(cam);
 		if (camera == null || !Std.isOfType(camera, FlxCamera)) camera = PlayState.instance.camGame;
 		return camera;
 	}

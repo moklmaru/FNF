@@ -5,7 +5,7 @@ import menu.options.CheckboxThingie;
 
 import menu.options.Option.OptionType;
 
-class GameplayChangersSubstate extends MusicBeatSubstate
+class GameplayChangersSubstate extends FunkinSubState
 {
 	private var curSelected:Int = 0;
 	private var optionsArray:Array<Dynamic> = [];

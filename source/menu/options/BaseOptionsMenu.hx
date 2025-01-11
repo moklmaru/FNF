@@ -10,7 +10,7 @@ import menu.options.AttachedText;
 import menu.options.Option;
 import core.controls.InputFormatter;
 
-class BaseOptionsMenu extends MusicBeatSubstate
+class BaseOptionsMenu extends FunkinSubState
 {
 	private var curOption:Option = null;
 	private var curSelected:Int = 0;

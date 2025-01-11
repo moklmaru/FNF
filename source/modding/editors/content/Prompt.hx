@@ -10,7 +10,7 @@ class ExitConfirmationPrompt extends Prompt
 		super('There\'s unsaved progress,\nare you sure you want to exit?', function()
 		{
 			FlxG.mouse.visible = false;
-			MusicBeatState.switchState(new modding.editors.MasterEditorMenu());
+			FunkinState.switchState(new modding.editors.MasterEditorMenu());
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			if(finishCallback != null) finishCallback();
 		}, 'Exit');
@@ -61,7 +61,7 @@ class Prompt extends BasePrompt
 	}
 }
 
-class BasePrompt extends MusicBeatSubstate
+class BasePrompt extends FunkinSubState
 {
 	var _sizeX:Float = 0;
 	var _sizeY:Float = 0;

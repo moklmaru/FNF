@@ -24,8 +24,8 @@ import js.html.*;
 import core.util.Paths;
 import core.controls.Controls;
 import core.util.CoolUtil;
-import core.MusicBeatState;
-import core.MusicBeatSubstate;
+import core.FunkinState;
+import core.FunkinSubState;
 import menu.options.ClientPrefs;
 import core.Conductor;
 import gameplay.stages.BaseStage;
@@ -40,7 +40,7 @@ import gameplay.stages.BGSprite;
 
 import gameplay.PlayState;
 import menu.transition.LoadingState;
-import menu.transition.TransitionSubstate;
+import menu.transition.TransitionSubState;
 
 #if flxanimate
 import flxanimate.*;

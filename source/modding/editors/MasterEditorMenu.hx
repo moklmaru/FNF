@@ -7,7 +7,7 @@ import gameplay.Character;
 import menu.main.MainMenuState;
 import menu.freeplay.FreeplayState;
 
-class MasterEditorMenu extends MusicBeatState
+class MasterEditorMenu extends FunkinState
 {
 	var options:Array<String> = [
 		'Chart Editor',
@@ -99,7 +99,7 @@ class MasterEditorMenu extends MusicBeatState
 
 		if (controls.BACK)
 		{
-			MusicBeatState.switchState(new MainMenuState());
+			FunkinState.switchState(new MainMenuState());
 		}
 
 		if (controls.ACCEPT)
@@ -112,15 +112,15 @@ class MasterEditorMenu extends MusicBeatState
 				case 'Stage Editor':
 					LoadingState.loadAndSwitchState(new StageEditorState());
 				case 'Week Editor':
-					MusicBeatState.switchState(new WeekEditorState());
+					FunkinState.switchState(new WeekEditorState());
 				case 'Menu Character Editor':
-					MusicBeatState.switchState(new MenuCharacterEditorState());
+					FunkinState.switchState(new MenuCharacterEditorState());
 				case 'Dialogue Editor':
 					LoadingState.loadAndSwitchState(new DialogueEditorState(), false);
 				case 'Dialogue Portrait Editor':
 					LoadingState.loadAndSwitchState(new DialogueCharacterEditorState(), false);
 				case 'Note Splash Editor':
-					MusicBeatState.switchState(new NoteSplashEditorState());
+					FunkinState.switchState(new NoteSplashEditorState());
 			}
 			FlxG.sound.music.volume = 0;
 			FreeplayState.destroyFreeplayVocals();

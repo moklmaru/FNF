@@ -3,7 +3,7 @@ package menu.options;
 import menu.main.MainMenuState;
 import gameplay.stages.StageData;
 
-class OptionsState extends MusicBeatState
+class OptionsState extends FunkinState
 {
 	var options:Array<String> = [
 		'Note Colors',
@@ -33,7 +33,7 @@ class OptionsState extends MusicBeatState
 			case 'Gameplay':
 				openSubState(new menu.options.GameplaySettingsSubState());
 			case 'Adjust Delay and Combo':
-				MusicBeatState.switchState(new menu.options.NoteOffsetState());
+				FunkinState.switchState(new menu.options.NoteOffsetState());
 			case 'Language':
 				openSubState(new menu.options.LanguageSubState());
 		}
@@ -104,7 +104,7 @@ class OptionsState extends MusicBeatState
 				LoadingState.loadAndSwitchState(new PlayState());
 				FlxG.sound.music.volume = 0;
 			}
-			else MusicBeatState.switchState(new MainMenuState());
+			else FunkinState.switchState(new MainMenuState());
 		}
 		else if (controls.ACCEPT) openSelectedSubstate(options[curSelected]);
 	}

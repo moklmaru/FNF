@@ -10,7 +10,7 @@ import flixel.math.FlxPoint;
 import menu.story.StoryMenuState;
 import menu.freeplay.FreeplayState;
 
-class GameOverSubstate extends MusicBeatSubstate
+class GameOverSubstate extends FunkinSubState
 {
 	public var boyfriend:Character;
 	var camFollow:FlxObject;
@@ -167,9 +167,9 @@ class GameOverSubstate extends MusicBeatSubstate
 	
 				Mods.loadTopMod();
 				if (PlayState.isStoryMode)
-					MusicBeatState.switchState(new StoryMenuState());
+					FunkinState.switchState(new StoryMenuState());
 				else
-					MusicBeatState.switchState(new FreeplayState());
+					FunkinState.switchState(new FreeplayState());
 	
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 				PlayState.instance.callOnScripts('onGameOverConfirm', [false]);
@@ -233,7 +233,7 @@ class GameOverSubstate extends MusicBeatSubstate
 			{
 				FlxG.camera.fade(FlxColor.BLACK, 2, false, function()
 				{
-					MusicBeatState.resetState();
+					FunkinState.resetState();
 				});
 			});
 			PlayState.instance.callOnScripts('onGameOverConfirm', [true]);

@@ -6,7 +6,7 @@ import menu.common.Bar;
 import menu.main.MainMenuState;
 
 #if ACHIEVEMENTS_ALLOWED
-class AchievementsMenuState extends MusicBeatState
+class AchievementsMenuState extends FunkinState
 {
 	public var curSelected:Int = 0;
 
@@ -206,7 +206,7 @@ class AchievementsMenuState extends MusicBeatState
 
 		if (controls.BACK) {
 			FlxG.sound.play(Paths.sound('cancelMenu'));
-			MusicBeatState.switchState(new MainMenuState());
+			FunkinState.switchState(new MainMenuState());
 			goingBack = true;
 		}
 		super.update(elapsed);
@@ -251,7 +251,7 @@ class AchievementsMenuState extends MusicBeatState
 	}
 }
 
-class ResetAchievementSubstate extends MusicBeatSubstate
+class ResetAchievementSubstate extends FunkinSubState
 {
 	var onYes:Bool = false;
 	var yesText:Alphabet;

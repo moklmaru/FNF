@@ -11,7 +11,7 @@ import modding.editors.objects.PsychUICheckBox;
 import modding.editors.objects.PsychUIEventHandler;
 import modding.editors.content.FileDialogHandler;
 
-class PreloadListSubState extends MusicBeatSubstate implements PsychUIEvent
+class PreloadListSubState extends FunkinSubState implements PsychUIEvent
 {
 	var lockedList:Array<String>;
 	var preloadList:Map<String, LoadFilters>;

@@ -12,14 +12,14 @@ import flixel.addons.transition.FlxTransitionableState;
 import openfl.display.Sprite;
 import openfl.geom.Matrix;
 import openfl.utils.Assets;
-import core.MusicBeatState;
-import core.MusicBeatSubstate;
+import core.FunkinState;
+import core.FunkinSubState;
 import core.util.Paths;
 import menu.transition.StickerSprite;
 import menu.transition.StickerSprite.StickerInfo;
 import menu.transition.StickerSprite.StickerData;
 
-class TransitionSubstate extends MusicBeatSubstate {
+class TransitionSubState extends FunkinSubState {
 	public static var finishCallback:Void->Void;
 	var isTransIn:Bool = false;
     var isStickers:Bool = false;
@@ -124,7 +124,7 @@ class TransitionSubstate extends MusicBeatSubstate {
             // if theres no existing stickers, generate new ones
             if (!isTransIn) {
                 createStickers();
-                MusicBeatState.isStickerTransition = true;
+                FunkinState.isStickerTransition = true;
             } else {
                 removeStickers();
             }
@@ -231,12 +231,12 @@ class TransitionSubstate extends MusicBeatSubstate {
 
             stickerData.push(data);
         }
-        MusicBeatState.stickerData = stickerData;
+        FunkinState.stickerData = stickerData;
     }
 
     public function removeStickers():Void {
         trace('removing ${stickerGroup.length} stickers');
-        MusicBeatState.isStickerTransition = false;
+        FunkinState.isStickerTransition = false;
 
         // if theres no stickers... we're done here!
         if (stickerGroup.members == null || stickerGroup.members.length == 0) {

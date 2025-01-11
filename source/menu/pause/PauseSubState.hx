@@ -10,7 +10,7 @@ import menu.story.StoryMenuState;
 import menu.freeplay.FreeplayState;
 import menu.options.OptionsState;
 
-class PauseSubState extends MusicBeatSubstate
+class PauseSubState extends FunkinSubState
 {
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
@@ -176,7 +176,7 @@ class PauseSubState extends MusicBeatSubstate
 			FlxTransitionableState.skipNextTransIn = true;
 			FlxTransitionableState.skipNextTransOut = true;
 			PlayState.nextReloadAll = true;
-			MusicBeatState.resetState();
+			FunkinState.resetState();
 		}
 
 		updateSkipTextStuff();
@@ -232,7 +232,7 @@ class PauseSubState extends MusicBeatSubstate
 					{
 						Song.loadFromJson(poop, songLowercase);
 						PlayState.storyDifficulty = curSelected;
-						MusicBeatState.resetState();
+						FunkinState.resetState();
 						FlxG.sound.music.volume = 0;
 						PlayState.changedDifficulty = true;
 						PlayState.chartingMode = false;
@@ -309,7 +309,7 @@ class PauseSubState extends MusicBeatSubstate
 					PlayState.instance.paused = true; // For lua
 					PlayState.instance.vocals.volume = 0;
 					PlayState.instance.canResync = false;
-					MusicBeatState.switchState(new OptionsState());
+					FunkinState.switchState(new OptionsState());
 					if(ClientPrefs.data.pauseMusic != 'None')
 					{
 						FlxG.sound.playMusic(Paths.music(Paths.formatToSongPath(ClientPrefs.data.pauseMusic)), pauseMusic.volume);
@@ -325,10 +325,10 @@ class PauseSubState extends MusicBeatSubstate
 					PlayState.instance.canResync = false;
 					Mods.loadTopMod();
 					if(PlayState.isStoryMode)
-						MusicBeatState.switchState(new StoryMenuState());
+						FunkinState.switchState(new StoryMenuState());
 					else {
-						MusicBeatState.isStickerTransition = true;
-						MusicBeatState.switchState(new FreeplayState());
+						FunkinState.isStickerTransition = true;
+						FunkinState.switchState(new FreeplayState());
 					}
 
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
@@ -362,7 +362,7 @@ class PauseSubState extends MusicBeatSubstate
 			FlxTransitionableState.skipNextTransIn = true;
 			FlxTransitionableState.skipNextTransOut = true;
 		}
-		MusicBeatState.resetState();
+		FunkinState.resetState();
 	}
 
 	override function destroy()

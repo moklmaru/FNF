@@ -2,7 +2,7 @@ package modding.psychlua;
 
 import flixel.FlxObject;
 
-class CustomSubstate extends MusicBeatSubstate
+class CustomSubstate extends FunkinSubState
 {
 	public static var name:String = 'unnamed';
 	public static var instance:CustomSubstate;
@@ -47,7 +47,7 @@ class CustomSubstate extends MusicBeatSubstate
 	{
 		if(instance != null)
 		{
-			var tagObject:FlxObject = cast (MusicBeatState.getVariables().get(tag), FlxObject);
+			var tagObject:FlxObject = cast (FunkinState.getVariables().get(tag), FlxObject);
 
 			if(tagObject != null)
 			{

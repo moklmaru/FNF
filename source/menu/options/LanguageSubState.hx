@@ -2,7 +2,7 @@ package menu.options;
 
 import openfl.utils.Assets;
 
-class LanguageSubState extends MusicBeatSubstate
+class LanguageSubState extends FunkinSubState
 {
 	#if TRANSLATIONS_ALLOWED
 	var grpLanguages:FlxTypedGroup<Alphabet> = new FlxTypedGroup<Alphabet>();
@@ -113,7 +113,7 @@ class LanguageSubState extends MusicBeatSubstate
 			{
 				FlxTransitionableState.skipNextTransIn = true;
 				FlxTransitionableState.skipNextTransOut = true;
-				MusicBeatState.resetState();
+				FunkinState.resetState();
 			}
 			else close();
 			FlxG.sound.play(Paths.sound('cancelMenu'));

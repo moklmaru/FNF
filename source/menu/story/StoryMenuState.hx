@@ -17,7 +17,7 @@ import gameplay.score.ResetScoreSubState;
 
 import gameplay.stages.StageData;
 
-class StoryMenuState extends MusicBeatState
+class StoryMenuState extends FunkinState
 {
 	public static var weekCompleted:Map<String, Bool> = new Map<String, Bool>();
 
@@ -63,9 +63,9 @@ class StoryMenuState extends MusicBeatState
 		{
 			FlxTransitionableState.skipNextTransIn = true;
 			persistentUpdate = false;
-			MusicBeatState.switchState(new core.debug.ErrorState("NO WEEKS ADDED FOR STORY MODE\n\nPress ACCEPT to go to the Week Editor Menu.\nPress BACK to return to Main Menu.",
-				function() MusicBeatState.switchState(new modding.editors.WeekEditorState()),
-				function() MusicBeatState.switchState(new menu.main.MainMenuState())));
+			FunkinState.switchState(new core.debug.ErrorState("NO WEEKS ADDED FOR STORY MODE\n\nPress ACCEPT to go to the Week Editor Menu.\nPress BACK to return to Main Menu.",
+				function() FunkinState.switchState(new modding.editors.WeekEditorState()),
+				function() FunkinState.switchState(new menu.main.MainMenuState())));
 			return;
 		}
 
@@ -204,7 +204,7 @@ class StoryMenuState extends MusicBeatState
 			{
 				FlxG.sound.play(Paths.sound('cancelMenu'));
 				movedBack = true;
-				MusicBeatState.switchState(new MainMenuState());
+				FunkinState.switchState(new MainMenuState());
 			}
 			super.update(elapsed);
 			return;
@@ -281,7 +281,7 @@ class StoryMenuState extends MusicBeatState
 		{
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			movedBack = true;
-			MusicBeatState.switchState(new MainMenuState());
+			FunkinState.switchState(new MainMenuState());
 		}
 
 		super.update(elapsed);

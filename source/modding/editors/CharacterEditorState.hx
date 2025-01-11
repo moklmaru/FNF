@@ -17,7 +17,7 @@ import menu.common.Bar;
 import modding.editors.content.Prompt;
 import modding.editors.content.PsychJsonPrinter;
 
-class CharacterEditorState extends MusicBeatState implements PsychUIEventHandler.PsychUIEvent
+class CharacterEditorState extends FunkinState implements PsychUIEventHandler.PsychUIEvent
 {
 	var character:Character;
 	var ghost:FlxSprite;
@@ -1054,7 +1054,7 @@ class CharacterEditorState extends MusicBeatState implements PsychUIEventHandler
 			{
 				if(!unsavedProgress)
 				{
-					MusicBeatState.switchState(new modding.editors.MasterEditorMenu());
+					FunkinState.switchState(new modding.editors.MasterEditorMenu());
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 				}
 				else openSubState(new ExitConfirmationPrompt());
@@ -1062,7 +1062,7 @@ class CharacterEditorState extends MusicBeatState implements PsychUIEventHandler
 			else
 			{
 				FlxG.mouse.visible = false;
-				MusicBeatState.switchState(new PlayState());
+				FunkinState.switchState(new PlayState());
 			}
 			return;
 		}

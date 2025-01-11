@@ -13,7 +13,7 @@ import gameplay.notes.Note;
 import core.graphics.shaders.RGBPalette;
 import core.graphics.shaders.RGBPalette.RGBShaderReference;
 
-class NotesColorSubState extends MusicBeatSubstate
+class NotesColorSubState extends FunkinSubState
 {
 	var onModeColumn:Bool = true;
 	var curSelectedMode:Int = 0;

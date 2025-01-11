@@ -3,7 +3,7 @@ package menu.credits;
 import menu.common.AttachedSprite;
 import menu.main.MainMenuState;
 
-class CreditsState extends MusicBeatState
+class CreditsState extends FunkinState
 {
 	var curSelected:Int = -1;
 
@@ -181,7 +181,7 @@ class CreditsState extends MusicBeatState
 			if (controls.BACK)
 			{
 				FlxG.sound.play(Paths.sound('cancelMenu'));
-				MusicBeatState.switchState(new MainMenuState());
+				FunkinState.switchState(new MainMenuState());
 				quitting = true;
 			}
 		}
