@@ -4,7 +4,7 @@ package;
 import android.content.Context;
 #end
 
-import debug.FPSCounter;
+import core.debug.FPSCounter;
 
 import flixel.graphics.FlxGraphic;
 import flixel.FlxGame;
@@ -16,14 +16,14 @@ import openfl.display.Sprite;
 import openfl.events.Event;
 import openfl.display.StageScaleMode;
 import lime.app.Application;
-import states.TitleState;
+import menu.title.TitleState;
 
 #if linux
 import lime.graphics.Image;
 #end
 
 #if desktop
-import backend.ALSoftConfig; // Just to make sure DCE doesn't remove this, since it's not directly referenced anywhere else.
+import core.debug.ALSoftConfig; // Just to make sure DCE doesn't remove this, since it's not directly referenced anywhere else.
 #end
 
 //crash handler stuff
@@ -33,7 +33,7 @@ import haxe.CallStack;
 import haxe.io.Path;
 #end
 
-import backend.Highscore;
+import gameplay.score.Highscore;
 
 class Main extends Sprite
 {
@@ -113,7 +113,7 @@ class Main extends Sprite
 
 		Highscore.load();
 
-		#if LUA_ALLOWED Lua.set_callbacks_function(cpp.Callable.fromStaticFunction(psychlua.CallbackHandler.call)); #end
+		#if LUA_ALLOWED Lua.set_callbacks_function(cpp.Callable.fromStaticFunction(modding.psychlua.CallbackHandler.call)); #end
 		Controls.instance = new Controls();
 		ClientPrefs.loadDefaultKeys();
 		#if ACHIEVEMENTS_ALLOWED Achievements.load(); #end

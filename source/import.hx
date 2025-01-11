@@ -1,7 +1,7 @@
 #if !macro
 //Discord API
 #if DISCORD_ALLOWED
-import backend.Discord;
+import core.api.Discord;
 #end
 
 //Psych
@@ -11,7 +11,7 @@ import llua.Lua;
 #end
 
 #if ACHIEVEMENTS_ALLOWED
-import backend.Achievements;
+import core.achievements.Achievements;
 #end
 
 #if sys
@@ -21,27 +21,26 @@ import sys.io.*;
 import js.html.*;
 #end
 
-import backend.Paths;
-import backend.Controls;
-import backend.CoolUtil;
-import backend.MusicBeatState;
-import backend.MusicBeatSubstate;
-import backend.ClientPrefs;
-import backend.Conductor;
-import backend.BaseStage;
-import backend.Difficulty;
-import backend.Mods;
-import backend.Language;
+import core.util.Paths;
+import core.controls.Controls;
+import core.util.CoolUtil;
+import core.MusicBeatState;
+import core.MusicBeatSubstate;
+import menu.options.ClientPrefs;
+import core.Conductor;
+import gameplay.stages.BaseStage;
+import gameplay.Difficulty;
+import modding.Mods;
+import core.Language;
 
-import backend.ui.*; //Psych-UI
+import modding.editors.objects.*; //Psych-UI
 
-import objects.Alphabet;
-import objects.BGSprite;
+import core.Alphabet;
+import gameplay.stages.BGSprite;
 
-import states.PlayState;
-import states.LoadingState;
-
-import substates.TransitionSubstate;
+import gameplay.PlayState;
+import menu.transition.LoadingState;
+import menu.transition.TransitionSubstate;
 
 #if flxanimate
 import flxanimate.*;
