@@ -16,7 +16,6 @@ import openfl.display.BitmapData;
 import core.graphics.shaders.ColorSwap;
 
 import menu.story.StoryMenuState;
-import core.debug.OutdatedState;
 import menu.main.MainMenuState;
 import menu.freeplay.FreeplayState;
 
@@ -66,8 +65,6 @@ class TitleState extends FunkinState
 	var easterEggKeysBuffer:String = '';
 	#end
 
-	var mustUpdate:Bool = false;
-
 	public static var updateVersion:String = '';
 
 	override public function create():Void
@@ -94,10 +91,6 @@ class TitleState extends FunkinState
 				updateVersion = data.split('\n')[0].trim();
 				var curVersion:String = MainMenuState.psychEngineVersion.trim();
 				trace('version online: ' + updateVersion + ', your version: ' + curVersion);
-				if(updateVersion != curVersion) {
-					trace('versions arent matching!');
-					mustUpdate = true;
-				}
 			}
 
 			http.onError = function (error) {
@@ -423,11 +416,7 @@ class TitleState extends FunkinState
 
 				new FlxTimer().start(1, function(tmr:FlxTimer)
 				{
-					if (mustUpdate)
-						FunkinState.switchState(new OutdatedState());
-					else
-						FunkinState.switchState(new MainMenuState());
-
+					FunkinState.switchState(new MainMenuState());
 					closedState = true;
 				});
 				// FlxG.sound.play(Paths.music('titleShoot'), 0.7);
