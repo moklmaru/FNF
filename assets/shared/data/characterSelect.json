@@ -1,0 +1,30 @@
+{
+    "characters": {
+        "bf": {
+            "name" : "Boyfriend",
+            "aliases": [
+                "bf",
+                "bf-car",
+                "bf-christmas",
+                "bf-pixel",
+                "bf-holding-gf"
+            ]
+        },
+        "pico": {
+            "name" : "Pico",
+            "aliases": [
+                "pico",
+                "pico-playable",
+                "pico-christmas",
+                "pico-pixel"
+            ]
+        },
+        "gf": {
+            "name" : "Girlfriend",
+            "aliases": [
+                "gf_sprinklezV2",
+                "gfplayablepixel"
+            ]
+        }
+    }
+}

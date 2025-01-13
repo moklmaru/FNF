@@ -85,7 +85,7 @@ class MusicPlayer extends FlxGroup
 			return;
 		}
 
-		var songName:String = instance.songList[FreeplayState.selectedSong].songName;
+		var songName:String = instance.songList.members[FreeplayState.currentIndex].name;
 		if (playing && !wasPlaying)
 			songText.text = Language.getPhrase('musicplayer_playing', 'PLAYING: {1}', [songName]);
 		else
@@ -291,7 +291,7 @@ class MusicPlayer extends FlxGroup
 
 	function positionSong() 
 	{
-		var length:Int = instance.songList[FreeplayState.selectedSong].songName.length;
+		var length:Int = instance.songList.members[FreeplayState.currentIndex].name.length;
 		var shortName:Bool = length < 5; // Fix for song names like Ugh, Guns
 		songText.x = FlxG.width - songText.width - 6;
 		if (shortName)
