@@ -1,8 +1,9 @@
 {
     "characters": {
         "bf": {
+            "index": 0,
             "name" : "Boyfriend",
-            "aliases": [
+            "sprites": [
                 "bf",
                 "bf-car",
                 "bf-christmas",
@@ -11,8 +12,9 @@
             ]
         },
         "pico": {
+            "index": 1,
             "name" : "Pico",
-            "aliases": [
+            "sprites": [
                 "pico",
                 "pico-playable",
                 "pico-christmas",
@@ -20,8 +22,9 @@
             ]
         },
         "gf": {
+            "index": 2,
             "name" : "Girlfriend",
-            "aliases": [
+            "sprites": [
                 "gf_sprinklezV2",
                 "gfplayablepixel"
             ]

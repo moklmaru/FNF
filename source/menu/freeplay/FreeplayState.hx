@@ -1,15 +1,20 @@
 package menu.freeplay;
 
 import gameplay.score.Highscore;
-
+import gameplay.score.ResetScoreSubState;
 import gameplay.hud.HealthIcon;
 import menu.freeplay.MusicPlayer;
 import menu.freeplay.FreeplayListEntry;
-
 import menu.options.GameplayChangersSubstate;
-import gameplay.score.ResetScoreSubState;
 
 import flixel.util.FlxDestroyUtil;
+import openfl.utils.Assets;
+
+typedef PlayerCharacter = {
+	var index:Int;
+	var id:String;
+	var name:String;
+}
 
 /**
 	Freeplay!
@@ -25,11 +30,12 @@ import flixel.util.FlxDestroyUtil;
 class FreeplayState extends FunkinState {
 	private static var currentIndex:Int = 0;
 	private static var currentSong:FreeplayListEntry;
+	private static var currentWeek:Int = 0;
 	private var songList:FlxTypedGroup<FreeplayListEntry>; // list of songs displayed in the menu
-	private static var songListLength:Int = 0;
+	private static var songListLength:Int = 0; // for passing into the FreeplayListEntry group
 
-	private static var currentCharacter:String = "bf";
-	private var charaName:FlxText;
+	private static var dipshit:PlayerCharacter = { index: 0, id: "bf", name: "Boyfriend"}; // just keeping the naming faithful...
+	private var charaText:FlxText;
 	
 	private static var difficultyPrev:String = Difficulty.getDefault();
 	private var difficulty:Int = -1;
@@ -52,7 +58,8 @@ class FreeplayState extends FunkinState {
 	private var musicPlayer:MusicPlayer;
 	private var bottomText:FlxText;
 
-	var musicBPM:Float = 102;
+	var musicBPM:Float = 102; // default menu bpm
+	// to-do: nab bpm from selected song as it previews instrumentals
 
 	override function create() {		
 		persistentUpdate = true;
@@ -110,10 +117,10 @@ class FreeplayState extends FunkinState {
 		charaSelectBG.alpha = 0.6;
 		add(charaSelectBG);
 
-		var name = if (currentCharacter == "bf") "Boyfriend" else "Girlfriend";
-		charaName = new FlxText(charaSelectText.x, charaSelectText.y + 28, 0, name, 42);
-		charaName.font = charaSelectText.font;
-		add(charaName);
+		updateCharacter(true); // initialize our character data
+		charaText = new FlxText(charaSelectText.x, charaSelectText.y + 28, 0, dipshit.name, 42);
+		charaText.font = charaSelectText.font;
+		add(charaText);
 
 		add(charaSelectText);
 
@@ -396,7 +403,7 @@ class FreeplayState extends FunkinState {
 		}
 
 		else if (FlxG.keys.justPressed.TAB) {
-			changeCharacter();
+			updateCharacter();
 		}
 
 		super.update(elapsed);
@@ -436,22 +443,27 @@ class FreeplayState extends FunkinState {
 
 		// get array of songs for the current character
 		var index:Int = 0;
+		var weekIndex = 0; // index of the weeks for this specific list
 		for (i => week in WeekData.weeksList) {
 			if (weekIsLocked(week)) continue; // skip locked weeks
 
 			var leWeek:WeekData = WeekData.weeksLoaded.get(week);
 			WeekData.setDirectoryFromWeek(leWeek);
+			
+			var validWeek:Bool = false;
 			for (song in leWeek.songs) {
 				var playerChar = song[1]; // bypass songs that arent for our selected character
 				// trace('song ${song[0]} is for $playerChar');
-				if (playerChar != currentCharacter) continue;
+				if (playerChar != dipshit.id) continue;
 
-				var songEntry:FreeplayListEntry = new FreeplayListEntry(song, index, i);
+				var songEntry:FreeplayListEntry = new FreeplayListEntry(song, index, weekIndex);
 				songEntry.hide();
 				songList.add(songEntry);
 
 				index++;
+				validWeek = true;
 			}
+			if (validWeek) weekIndex++;
 		}
 		Mods.loadTopMod();
 		add(songList);
@@ -460,15 +472,44 @@ class FreeplayState extends FunkinState {
 		WeekData.setDirectoryFromWeek();
 	}
 
-	function changeCharacter() {
-		var char = if (currentCharacter == "bf") "gf" else "bf";
-		var name = if (char == "bf") "Boyfriend" else "Girlfriend";
-		currentCharacter = char;
-		charaName.text = name;
-		
-		// wipe all of the existing list data
-		remove(songList);
+	function updateCharacter(?init:Bool = false) {
+		var path = Paths.getPath('data/characterSelect.json', TEXT);
+		var data:Dynamic = Json.parse(File.getContent(path));
 
+		if (!init) { // advance to the next character
+			var length:Int = Reflect.fields(data.characters).length;
+			var idx = FlxMath.wrap(dipshit.index + 1, 0, length-1);
+			dipshit.index = idx;
+		}
+
+		// WHY is this language so insufferable with parsing jsons
+		var charList = Reflect.fields(data.characters);
+		for (dood in charList) {
+			var info:Dynamic = Reflect.field(data.characters, dood);
+			if (info == null) continue;
+			if (dipshit.index == info.index) {
+				dipshit.id = dood;
+				// trace('charID is ${dipshit.id} for index ${dipshit.index}');
+				var char:Dynamic = Reflect.field(data.characters, dipshit.id);
+				if (char == null) return;
+
+				var name = Reflect.field(char, "name");
+				if (name == null) {
+					name = "???";
+					trace('Character name not found for ID ${dipshit.index}!');
+				}
+				dipshit.name = name;
+
+				break;
+			}
+		}
+		
+		if (init) return;
+
+		charaText.text = dipshit.name;
+
+		// refresh song list for the new character
+		remove(songList);
 		updateSongList();
 		changeSelection(0, true);
 	}
@@ -503,7 +544,8 @@ class FreeplayState extends FunkinState {
 		if(playSound) FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 
 		currentSong = songList.members[currentIndex];
-		// trace('selected song: ' + currentSong.name);
+		currentWeek = currentSong.weekIndex;
+		// trace('selected song: ${currentSong.name} of week: $currentWeek');
 
 		var newColor:FlxColor = currentSong.color;
 		if(newColor != backgroundColor) {
@@ -512,12 +554,8 @@ class FreeplayState extends FunkinState {
 			FlxTween.color(background, 0.5, background.color, backgroundColor);
 		}
 
-		for (entry in songList.members) {
-			if (entry.index == currentIndex)
-				entry.setSelected();
-			else
-				entry.setDeselected();
-		}
+		for (entry in songList.members)
+			entry.setSelected(entry.index == currentIndex);
 		
 		Mods.currentModDirectory = currentSong.folder;
 		PlayState.storyWeek = currentSong.weekIndex;

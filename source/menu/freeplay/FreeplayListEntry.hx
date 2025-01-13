@@ -63,7 +63,7 @@ class FreeplayListEntry extends FlxGroup
 
         this.songName = new Alphabet(350, 320, songText, true);
         songName.targetY = index;
-        songName.distancePerItem.y = 40;
+        songName.distancePerItem.y = 35;
         songName.snapToPosition();
         songName.setScale(songName.scaleX * SCALE, songName.scaleY * SCALE);
         songName.startPosition = new FlxPoint(songName.x, songName.y);
@@ -102,63 +102,55 @@ class FreeplayListEntry extends FlxGroup
         add(icon);
 	}
 
-    // functions for tweening/animating the entrys as they come in/out of focus
-    function setSelected() {
-        FlxTween.tween(songName, { scaleX: 0.8, scaleY: 0.8 }, 0.2, { ease: FlxEase.quadInOut });
-        FlxTween.tween(songName, {alpha: 1}, 0.2);
+    // tweens/animates the entrys as they come in/out of focus
+    function setSelected(selected:Bool) {
+        var TIMING = 0.2; // how long the tween should take
+        var songScale = if (selected) 0.8 else SCALE;
+        var subScale = if (selected) 0.45 else SCALE * 0.7;
+        var subPos =
+            if (selected) new FlxPoint(6, 22)
+            else new FlxPoint(0, 7);
+        var iconScale = if (selected) 1.0 else 0.4;
+        var iconPos =
+            if (selected) new FlxPoint(-icon.width, -50)
+            else new FlxPoint(-(icon.width * 0.8), -60);
+        var alpha = if (selected) 1.0 else 0.6;
+
+        FlxTween.tween(songName, { scaleX: songScale, scaleY: songScale }, TIMING, { ease: FlxEase.quadInOut });
+        FlxTween.tween(songName, {alpha: alpha}, TIMING);
         if (subTitle != null) {
-            FlxTween.tween(subTitle, { scaleX: 0.45, scaleY: 0.45 }, 0.2, { ease: FlxEase.quadInOut });
-            FlxTween.tween(subTitle, {alpha: 1.0}, 0.2);
-            FlxTween.tween(subOffset, { x: 6, y: 22 }, 0.2);
+            FlxTween.tween(subTitle, { scaleX: subScale, scaleY: subScale }, TIMING, { ease: FlxEase.quadInOut });
+            FlxTween.tween(subTitle, {alpha: alpha}, TIMING);
+            FlxTween.tween(subOffset, { x: subPos.x, y: subPos.y }, TIMING);
         }
-        FlxTween.tween(icon.scale, { x: 1.0, y: 1.0 }, 0.2, { ease: FlxEase.elasticInOut });
-        FlxTween.tween(icon, {alpha: 1}, 0.2);
-        FlxTween.tween(iconOffset, { x: -icon.width, y: -50 }, 0.2);
-    }
-    function setDeselected() {
-        FlxTween.tween(songName, { scaleX: SCALE, scaleY: SCALE }, 0.2, { ease: FlxEase.quadInOut });
-        FlxTween.tween(songName, {alpha: 0.6}, 0.2);
-        if (subTitle != null) {
-            FlxTween.tween(subTitle, { scaleX: SCALE * 0.7, scaleY: SCALE * 0.7 }, 0.2, { ease: FlxEase.quadInOut });
-            FlxTween.tween(subTitle, {alpha: 0.6}, 0.2);
-            FlxTween.tween(subOffset, { x: 0, y: 7 }, 0.2);
-        }
-        FlxTween.tween(icon.scale, { x: 0.4, y: 0.4 }, 0.2, { ease: FlxEase.elasticInOut });
-        FlxTween.tween(icon, {"alpha": 0.6}, 0.2);
-        icon.angle = 0;
-        FlxTween.tween(iconOffset, { x: -(icon.width * 0.8), y: -60 }, 0.2);
+        FlxTween.tween(icon.scale, { x: iconScale, y: iconScale }, TIMING, { ease: FlxEase.elasticInOut });
+        FlxTween.tween(icon, {alpha: alpha}, TIMING);
+        FlxTween.tween(iconOffset, { x: iconPos.x, y: iconPos.y }, TIMING);
+        if (!selected) icon.angle = 0; // halt the jamming...
     }
 
-    function show() {
-        // trace('Showimg song: $name');
-        songName.visible = songName.active = songName.isMenuItem = true;
+    function setVisible(bool:Bool) {
+        songName.visible = songName.active = songName.isMenuItem = bool;
         if (subTitle != null)
-            subTitle.visible = subTitle.active = subTitle.isMenuItem = true;
-        icon.visible = icon.active = true;
+            subTitle.visible = subTitle.active = subTitle.isMenuItem = bool;
+        icon.visible = icon.active = bool;
 
-        this.shown = true;
+        this.shown = bool;
     }
-    function hide() {
-        // trace('Hiding song: $name');
-        songName.visible = songName.active = songName.isMenuItem = false;
-        if (subTitle != null)
-            subTitle.visible = subTitle.active = subTitle.isMenuItem = false;
-        icon.visible = icon.active = false;
-
-        this.shown = false;
-    }
+    function show() setVisible(true);
+    function hide() setVisible(false);
 
     // its time for some MATH boys !!!
     var DRAW_DISTANCE:Int = 7; // how far from the selected song that entrys will be visible
     override function update(elapsed:Float) {
         super.update(elapsed);
         songName.update(elapsed); // update the alphabet text
-        icon.update(elapsed); // update the icon
 
         var currentIndex = FreeplayState.currentIndex;
+        var selected = (currentIndex == index);
 
-        // this value is used for smooth positioning, as it will lerp between the 2 indexes being shifted between
-        // it is a relative value shared between all entries as the list shifts
+        // this value is used for smooth transitioning, as it will lerp between the 2 song items being shifted between
+        // it is a universal value shared between all entries as the list shifts
         lerpIndex = FlxMath.lerp(currentIndex, lerpIndex, Math.exp(-FlxG.elapsed * 9.6));
 
         // kill anything outside of the draw distance and bypass rest of the logic
@@ -168,29 +160,29 @@ class FreeplayListEntry extends FlxGroup
             if (shown) hide();
             return;
         }
-            
-        var selected = (currentIndex == index);
 
         // give a little extra wiggle room on either side of the selected song
         // this padding is relative to how close to the center the selction is (keeps it smooth)
         var delta = Math.abs(currentIndex - lerpIndex); // basically how big our current lerp is
-        var diff = FlxMath.bound(30 * delta, 0, 30); // smaller the lerp, bigger the margin
+        var diff = FlxMath.bound(30 * delta, 0, 30); // smaller the lerp, bigger the margin!
         var dir = (lerpIndex < index) ? 1 : -1;
         var selectedMargin = if (!selected) (30 - diff) * dir else -15;
-
         var distance = songName.targetY - lerpIndex; // how far away from the selection this song is
+
+        // additional padding based on the week index. makes them appear in groups!
+        selectedMargin += (weekIndex - FreeplayState.currentWeek) * 25;
+
+        // not worth explaining these calcs in detail but it makes for a pretty circle formation
         pos.x = (Math.pow(distance, 2) * songName.distancePerItem.x * 0.2) + songName.startPosition.x;
         pos.y = (distance * songName.distancePerItem.y * 1.3) + songName.startPosition.y + selectedMargin;
         songName.setPosition(pos.x, pos.y);
-
-        if (subTitle != null) 
-            subTitle.setPosition(pos.x + songName.width + subOffset.x, pos.y + subOffset.y);
-
         icon.setPosition(pos.x + iconOffset.x, pos.y + iconOffset.y);
+        if (subTitle != null) // only update subtitle if it exists
+            subTitle.setPosition(pos.x + songName.width + subOffset.x, pos.y + subOffset.y);
 
         if (!shown) show();
 
-        // handles lerping of the icon jammin out
+        // handles lerping of the icon jammin out to the beat
         if (selected) {
             iconLerp = FlxMath.lerp(icon.angle, 0, 0.05);
             icon.angle = iconLerp;

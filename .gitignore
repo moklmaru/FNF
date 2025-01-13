@@ -9,7 +9,7 @@ art/test_x64-debug-officialrelease.bat
 export/*
 mods/*
 example_mods/*
-.vscode/*
+.vscode/
 .haxelib/
 .github/
 *.code-workspace
