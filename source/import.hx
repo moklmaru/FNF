@@ -23,9 +23,10 @@ import js.html.*;
 
 import core.FunkinState;
 import core.FunkinSubState;
+import core.Conductor;
+import core.Song;
 import core.WeekData;
 import core.Alphabet;
-import core.Conductor;
 import core.Language;
 import core.util.Paths;
 import core.util.CoolUtil;
@@ -40,7 +41,6 @@ import menu.transition.TransitionSubState;
 import menu.common.*;
 
 import gameplay.PlayState;
-import gameplay.Song;
 import gameplay.Character;
 import gameplay.Difficulty;
 import gameplay.GameOverSubstate;

@@ -242,7 +242,7 @@ class LoadingState extends FunkinState
 	{
 		for (key => bitmap in requestedBitmaps)
 		{
-			if (bitmap != null && Paths.cacheBitmap(originalBitmapKeys.get(key), bitmap) != null) trace('finished preloading image $key');
+			if (bitmap != null && Paths.cacheBitmap(originalBitmapKeys.get(key), bitmap) != null) {} // trace('finished preloading image $key');
 			else trace('failed to cache image $key');
 		}
 		requestedBitmaps.clear();
@@ -529,7 +529,7 @@ class LoadingState extends FunkinState
 	{
 		Thread.create(() -> {
 			try {
-				if (func() != null) trace('finished preloading $traceData');
+				if (func() != null) {} // trace('finished preloading $traceData');
 				else trace('ERROR! fail on preloading $traceData');
 			}
 			catch(e:Dynamic) {

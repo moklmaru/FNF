@@ -5,6 +5,7 @@ import gameplay.score.ResetScoreSubState;
 import gameplay.hud.HealthIcon;
 import menu.freeplay.MusicPlayer;
 import menu.freeplay.FreeplayListEntry;
+import menu.freeplay.FreeplayListEntry.FreeplayBonusTrack;
 import menu.options.GameplayChangersSubstate;
 
 import flixel.util.FlxDestroyUtil;
@@ -30,7 +31,7 @@ typedef PlayerCharacter = {
 class FreeplayState extends FunkinState {
 	private static var currentIndex:Int = 0;
 	private static var currentSong:FreeplayListEntry;
-	private static var currentWeek:Int = 0;
+	private static var currentWeek:Int = 0; // week index in the scope of the current character
 	private var songList:FlxTypedGroup<FreeplayListEntry>; // list of songs displayed in the menu
 	private static var songListLength:Int = 0; // for passing into the FreeplayListEntry group
 
@@ -60,6 +61,8 @@ class FreeplayState extends FunkinState {
 
 	var musicBPM:Float = 102; // default menu bpm
 	// to-do: nab bpm from selected song as it previews instrumentals
+
+	var musicBuffer:Int = 120; // buffer for the music to start playing
 
 	override function create() {		
 		persistentUpdate = true;
@@ -118,8 +121,8 @@ class FreeplayState extends FunkinState {
 		add(charaSelectBG);
 
 		updateCharacter(true); // initialize our character data
-		charaText = new FlxText(charaSelectText.x, charaSelectText.y + 28, 0, dipshit.name, 42);
-		charaText.font = charaSelectText.font;
+		charaText = new FlxText(charaSelectText.x, charaSelectText.y + 28, 0, dipshit.name.toUpperCase(), 42);
+		charaText.font = Paths.font("kidersun.otf");
 		add(charaText);
 
 		add(charaSelectText);
@@ -162,7 +165,7 @@ class FreeplayState extends FunkinState {
 	}
 
 	override function closeSubState() {
-		changeSelection(0, false);
+		// changeSelection(0, false); // why was this here
 		persistentUpdate = true;
 		super.closeSubState();
 	}
@@ -358,6 +361,23 @@ class FreeplayState extends FunkinState {
 		// go into the selected song
 		else if (controls.ACCEPT && !musicPlayer.playingMusic) {
 			persistentUpdate = false;
+
+			// swap into the alt track if it's difficulty is selected
+			var diff = Difficulty.getString(difficulty);
+			Difficulty.loadFromWeek();
+			if (!Difficulty.list.contains(diff)) {
+				trace('Difficulty ${diff} not found in song! (this is most likely a good thing)');
+				for (track in currentSong.altTracks) 
+				if (track.difficulties.contains(diff)) {
+					trace('Switching to ${track.name} instead');
+					currentSong = track;
+					Mods.currentModDirectory = currentSong.folder;
+					PlayState.storyWeek = currentSong.weekGlobalIndex;
+					break;
+				}
+				else trace("Nevermind, it's not a good thing. Fix your shit!");
+			}
+
 			var songLowercase:String = Paths.formatToSongPath(currentSong.name);
 			var poop:String = Highscore.formatSong(songLowercase, difficulty);
 
@@ -406,6 +426,7 @@ class FreeplayState extends FunkinState {
 			updateCharacter();
 		}
 
+		if (musicBuffer > 0) musicBuffer--;
 		super.update(elapsed);
 	}
 
@@ -440,6 +461,7 @@ class FreeplayState extends FunkinState {
 
 	function updateSongList() {
 		songList = new FlxTypedGroup<FreeplayListEntry>();
+		var appendedSongs:Array<FreeplayBonusTrack> = [];
 
 		// get array of songs for the current character
 		var index:Int = 0;
@@ -449,14 +471,33 @@ class FreeplayState extends FunkinState {
 
 			var leWeek:WeekData = WeekData.weeksLoaded.get(week);
 			WeekData.setDirectoryFromWeek(leWeek);
+
+			// note the difficulties of this week (or set the default)
+			var weekDiffs:Array<String> = leWeek.difficulties.trim().split(',');
+			if (weekDiffs.length < 1 || weekDiffs[0] == '')
+				weekDiffs = Difficulty.defaultList.copy();
 			
 			var validWeek:Bool = false;
-			for (song in leWeek.songs) {
+			for (idx => song in leWeek.songs) {
+				// record data for songs that are instead added as extra difficulties to other songs
+				if (leWeek.appended && leWeek.targets[idx] != null) {
+					// trace('${song[0]} should be appended to ${leWeek.targets[idx]}');
+					var track = new FreeplayBonusTrack(song, leWeek.targets[idx]);
+					track.difficulties = weekDiffs.copy();
+					track.weekGlobalIndex = i;
+					track.opponentChar = song[2];
+					//trace('opponentChar: ${track.opponentChar} on ${track.name}');
+					appendedSongs.push(track);
+					continue; // this song will NOT be added to the freeplay menu
+				}
+
 				var playerChar = song[1]; // bypass songs that arent for our selected character
 				// trace('song ${song[0]} is for $playerChar');
 				if (playerChar != dipshit.id) continue;
 
 				var songEntry:FreeplayListEntry = new FreeplayListEntry(song, index, weekIndex);
+				songEntry.difficulties = weekDiffs.copy();
+				songEntry.weekGlobalIndex = i;
 				songEntry.hide();
 				songList.add(songEntry);
 
@@ -465,6 +506,22 @@ class FreeplayState extends FunkinState {
 			}
 			if (validWeek) weekIndex++;
 		}
+
+		// assign the alt song data to source of the appended songs
+		for (track in appendedSongs) {
+			for (song in songList.members) {
+				if (song.name == track.parentName) {
+					// trace('appending ${track.name} to ${song.name}');
+					song.altTracks.push(track);
+					song.altOpponents.push(track.opponentChar);
+					track.parentSong = song;
+					for (diff in track.difficulties) song.difficulties.push(diff);
+
+					break;
+				}
+			}
+		}
+
 		Mods.loadTopMod();
 		add(songList);
 		songListLength = songList.members.length;
@@ -506,7 +563,7 @@ class FreeplayState extends FunkinState {
 		
 		if (init) return;
 
-		charaText.text = dipshit.name;
+		charaText.text = dipshit.name.toUpperCase();
 
 		// refresh song list for the new character
 		remove(songList);
@@ -518,6 +575,7 @@ class FreeplayState extends FunkinState {
 		if (musicPlayer.playingMusic)
 			return;
 
+		var lastDiff = Difficulty.getString(difficulty);
 		difficulty = FlxMath.wrap(difficulty + change, 0, Difficulty.list.length-1);
 		#if !switch
 		score = Highscore.getScore(currentSong.name, difficulty);
@@ -530,6 +588,27 @@ class FreeplayState extends FunkinState {
 			difficultyText.text = '< ' + displayDiff.toUpperCase() + ' >';
 		else
 			difficultyText.text = displayDiff.toUpperCase();
+
+		if (currentSong.altTracks.length > 0) {
+			for (track in currentSong.altTracks) {
+				if (track.difficulties.contains(displayDiff)) {
+					if (displayDiff != lastDiff)
+						FlxG.sound.play(Paths.sound('bside'), 0.6);
+
+					Mods.currentModDirectory = track.folder;
+					currentSong.changeIcon(track.opponentChar);
+					var altColor = FlxColor.fromRGB(205, 86, 209);
+					FlxTween.color(background, 0.2, background.color, altColor);
+					currentSong.usingAltIcon = true;
+					break;
+				} else if (currentSong.usingAltIcon) {
+					currentSong.changeIcon(currentSong.opponentChar);
+					FlxTween.cancelTweensOf(background);
+					FlxTween.color(background, 0.2, background.color, currentSong.color);
+					currentSong.usingAltIcon = false;
+				}
+			}
+		}
 
 		positionHighscore();
 		errorText.visible = false;
@@ -548,7 +627,7 @@ class FreeplayState extends FunkinState {
 		// trace('selected song: ${currentSong.name} of week: $currentWeek');
 
 		var newColor:FlxColor = currentSong.color;
-		if(newColor != backgroundColor) {
+		if(newColor != backgroundColor && !currentSong.usingAltIcon) {
 			backgroundColor = newColor;
 			FlxTween.cancelTweensOf(background);
 			FlxTween.color(background, 0.5, background.color, backgroundColor);
@@ -558,9 +637,18 @@ class FreeplayState extends FunkinState {
 			entry.setSelected(entry.index == currentIndex);
 		
 		Mods.currentModDirectory = currentSong.folder;
-		PlayState.storyWeek = currentSong.weekIndex;
-		Difficulty.loadFromWeek();
-		
+		PlayState.storyWeek = currentSong.weekGlobalIndex;
+		Difficulty.list = currentSong.difficulties.copy();
+
+		// draft for playing instrumentals. gotta fix modded song paths so it doesnt crash
+		// FlxG.sound.music.volume = 0;
+		// if (musicBuffer <= 0) {
+		// 	var poop:String = Highscore.formatSong(currentSong.name.toLowerCase(), difficulty);
+		// 	Song.loadFromJson(poop, currentSong.name.toLowerCase());
+		// 	if (PlayState.SONG != null) FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song), 0.8);
+		// 	musicBuffer = 120;
+		// }
+
 		var savedDiff:String = currentSong.lastDifficulty;
 		var lastDiff:Int = Difficulty.list.indexOf(difficultyPrev);
 		if(savedDiff != null && !Difficulty.list.contains(savedDiff) && Difficulty.list.contains(savedDiff))

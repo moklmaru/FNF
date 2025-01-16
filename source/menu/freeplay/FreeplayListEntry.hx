@@ -12,6 +12,7 @@ class FreeplayListEntry extends FlxGroup
 {
     var index:Int = 0; // placement in the song list
     var weekIndex:Int = 0; // placement of the parent week in the current load
+    var weekGlobalIndex:Int = 0; // placement of the parent week in the global list
 
     public var name:String; // full name of the song, as a string
     var songName:Alphabet;
@@ -29,8 +30,11 @@ class FreeplayListEntry extends FlxGroup
     var rank:FlxSprite; // to be added later
     var frame:FlxSprite; // to be added later
 
-    var difficulties:Array<Int> = [];
+    var difficulties:Array<String> = [];
     var lastDifficulty:String;
+    var altTracks:Array<FreeplayBonusTrack> = [];
+    var altOpponents:Array<String> = [];
+    var usingAltIcon:Bool = false;
 
     var lerpIndex:Float = 0; // the index that the song will lerp to when the selection is changed
     var pos:FlxPoint = new FlxPoint(0, 0);
@@ -94,16 +98,28 @@ class FreeplayListEntry extends FlxGroup
         // character icon
         // note: we'll be tracking it to the text in this class rather than using the tracking updates in HealthIcon
         // just a matter of more localized control + less buggyness
+        makeIcon(opponentChar);
+	}
+
+    function makeIcon(opponentChar) {
         this.icon = new HealthIcon(opponentChar);
         icon.scale.scale(SCALE, SCALE);
         iconOffset = new FlxPoint(-(icon.width * 0.8), -60);
         icon.setPosition(pos.x + iconOffset.x, pos.y + iconOffset.y);
 
         add(icon);
-	}
+        if (FreeplayState.currentIndex == index) setSelected(true);
+    }
+
+    function changeIcon(opponentChar) {
+        icon.visible = icon.active = false;
+        remove(icon);
+        makeIcon(opponentChar);
+        icon.visible = icon.active = true;
+    }
 
     // tweens/animates the entrys as they come in/out of focus
-    function setSelected(selected:Bool) {
+    function setSelected(selected:Bool, ?skipAnim = false) {
         var TIMING = 0.2; // how long the tween should take
         var songScale = if (selected) 0.8 else SCALE;
         var subScale = if (selected) 0.45 else SCALE * 0.7;
@@ -123,10 +139,14 @@ class FreeplayListEntry extends FlxGroup
             FlxTween.tween(subTitle, {alpha: alpha}, TIMING);
             FlxTween.tween(subOffset, { x: subPos.x, y: subPos.y }, TIMING);
         }
-        FlxTween.tween(icon.scale, { x: iconScale, y: iconScale }, TIMING, { ease: FlxEase.elasticInOut });
+        var iconAnim = if (skipAnim) FlxEase.elasticInOut else FlxEase.elasticOut;
+        FlxTween.tween(icon.scale, { x: iconScale, y: iconScale }, TIMING, { ease: iconAnim});
         FlxTween.tween(icon, {alpha: alpha}, TIMING);
         FlxTween.tween(iconOffset, { x: iconPos.x, y: iconPos.y }, TIMING);
         if (!selected) icon.angle = 0; // halt the jamming...
+        if (!selected && usingAltIcon) {
+            changeIcon(opponentChar);
+        } 
     }
 
     function setVisible(bool:Bool) {
@@ -187,5 +207,33 @@ class FreeplayListEntry extends FlxGroup
             iconLerp = FlxMath.lerp(icon.angle, 0, 0.05);
             icon.angle = iconLerp;
         } 
+    }
+
+    // alt update loop for children to call without the graphics logic
+    function updateBasic(elapsed) {
+        super.update(elapsed);
+    }
+}
+
+// similar class for recording info on songs that are appended as new difficulties for existing songs
+// these dont get displayed in the song list so they dont need any graphical elements
+@:access(menu.freeplay.FreeplayState)
+class FreeplayBonusTrack extends FreeplayListEntry {
+    public var parentName:String; // so we can find the actual entry for it
+    public var parentSong:FreeplayListEntry;
+
+    public function new(song:Array<Dynamic>, parentName:String, ?parentSong:FreeplayListEntry) {
+        super(song, 0, 0); // the indexes won't be accurate on creation anyqay
+        if (parentSong != null) this.parentSong = parentSong;
+        this.parentName = parentName;
+
+        // don't need these lol
+        remove(songName);
+        if (subTitle != null) remove(subTitle);
+        remove(icon);
+    }
+
+    override function update (elapsed:Float) {
+        super.updateBasic(elapsed);
     }
 }

@@ -1,8 +1,6 @@
-package gameplay;
+package core;
 
 import lime.utils.Assets;
-
-
 
 typedef SwagSong =
 {
@@ -29,6 +27,9 @@ typedef SwagSong =
 
 	@:optional var arrowSkin:String;
 	@:optional var splashSkin:String;
+
+	@:optional var appended:Bool;
+	@:optional var target:String;
 }
 
 typedef SwagSection =
@@ -62,6 +63,8 @@ class Song
 	public var player2:String = 'dad';
 	public var gfVersion:String = 'gf';
 	public var format:String = 'psych_v1';
+	public var appended:Bool = false;
+	public var target:String;
 
 	public static function convert(songJson:Dynamic) // Convert old charts to psych_v1 format
 	{
@@ -135,7 +138,7 @@ class Song
 	{
 		if(folder == null) folder = jsonInput;
 		var rawData:String = null;
-		
+		trace('loading chart $jsonInput from $folder...');
 		var formattedFolder:String = Paths.formatToSongPath(folder);
 		var formattedSong:String = Paths.formatToSongPath(jsonInput);
 		_lastPath = Paths.json('$formattedFolder/$formattedSong');
