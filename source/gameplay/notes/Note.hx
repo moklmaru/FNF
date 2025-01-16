@@ -200,9 +200,9 @@ class Note extends FlxSprite
 					rgbShader.b = 0xFF990022;
 
 					// splash data and colors
-					noteSplashData.r = 0xFFFF0000;
-					noteSplashData.g = 0xFF101010;
-					noteSplashData.texture = 'noteSplashes/noteSplashes';
+					//noteSplashData.r = 0xFFFF0000;
+					//noteSplashData.g = 0xFF101010;
+					noteSplashData.texture = 'noteSplashes-electric';
 
 					// gameplay data
 					lowPriority = true;
