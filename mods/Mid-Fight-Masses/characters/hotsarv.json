@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "LuciferSarvIdle"
+		},
+		{
+			"offsets": [
+				115,
+				-30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "LuciferSarvDown"
+		},
+		{
+			"offsets": [
+				150,
+				10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "LuciferSarvLeft"
+		},
+		{
+			"offsets": [
+				0,
+				27
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "LuciferSarvRight"
+		},
+		{
+			"offsets": [
+				-6,
+				11
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "LuciferSarvUp"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/hotsarv",
+	"position": [
+		-200,
+		-200
+	],
+	"healthicon": "hotsarv",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		42,
+		135
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

@@ -1,0 +1,29 @@
+{
+	"song": {
+		"speed": 2.3,
+		"stage": null,
+		"player1": "",
+		"player2": "",
+		"player3": null,
+		"events": [
+			[
+				0,
+				[
+					[
+						"Image intro",
+						"title",
+						"2"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 163,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": ""
+	}
+}

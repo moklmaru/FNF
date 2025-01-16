@@ -1,0 +1,216 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				-60,
+				-10
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Nene Abot Idle xmas",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				-30
+			],
+			"anim": "QUERISAWEY",
+			"fps": 24,
+			"name": "laughing nene xmas",
+			"indices": [
+				8,
+				9,
+				10,
+				11,
+				7,
+				8,
+				9,
+				10,
+				11,
+				7,
+				8,
+				9,
+				10,
+				11,
+				7,
+				8,
+				9,
+				10,
+				11,
+				7,
+				8,
+				9,
+				10,
+				11
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				-30
+			],
+			"anim": "ja2",
+			"fps": 24,
+			"name": "laughing nene xmas",
+			"indices": [
+				7,
+				8,
+				9,
+				10,
+				11,
+				11,
+				11,
+				11,
+				11,
+				11,
+				11,
+				11
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				-30
+			],
+			"anim": "ja",
+			"fps": 24,
+			"name": "laughing nene xmas",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-179,
+				41
+			],
+			"anim": "cheer",
+			"fps": 24,
+			"name": "combo celebration 1 nene xmas",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-100,
+				-25
+			],
+			"anim": "fawn",
+			"fps": 18,
+			"name": "fawn nene xmas",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				6,
+				6,
+				6,
+				6,
+				6
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-60,
+				42
+			],
+			"anim": "knifeRaise",
+			"fps": 24,
+			"name": "knife raise xmas",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				75,
+				41
+			],
+			"anim": "knifelower",
+			"fps": 16,
+			"name": "knife lower xmas",
+			"indices": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-169,
+				42
+			],
+			"anim": "knife",
+			"fps": 18,
+			"name": "knife high held xmas",
+			"indices": [
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
+			]
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/neneChristmas/neneChristmas",
+	"position": [
+		-100,
+		150
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		10,
+		-20
+	],
+	"sing_duration": 4,
+	"scale": 0.999999999999999,
+	"_editor_isPlayer": false
+}

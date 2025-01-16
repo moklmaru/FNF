@@ -1,0 +1,27 @@
+{
+	"storyName": "RED SNOW",
+	"difficulties": "hard",
+	"hideFreeplay": false,
+	"weekBackground": "christmas",
+	"weekBefore": "week4",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"parents-christmas",
+		"bf",
+		"gf"
+	],
+	"songs": [
+		[
+			"Eggnog (Pico Mix)",
+			"pico",
+			"parents",
+			[
+				160,
+				209,
+				255
+			]
+		]
+	],
+	"hideStoryMode": true,
+	"weekName": "Week 5"
+}

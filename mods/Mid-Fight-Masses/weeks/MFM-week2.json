@@ -1,0 +1,32 @@
+{
+	"songs": [
+		[
+			"casanova",
+			"selever",
+			[
+				155,
+				33,
+				73
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "church",
+	"difficulties": "hard",
+	"weekCharacters": [
+		"",
+		"",
+		"bf"
+	],
+	"storyName": "???",
+	"weekName": "huh? what do i put here?",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "",
+	"startUnlocked": true
+}

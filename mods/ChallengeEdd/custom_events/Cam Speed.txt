@@ -1,0 +1,4 @@
+Sets Cam Speed
+
+Value 1: X, Y
+Value 2: how long it takes, tween style

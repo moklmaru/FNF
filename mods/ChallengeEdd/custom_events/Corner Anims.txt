@@ -1,0 +1,4 @@
+controls animations for edd and BF for the tord part
+
+value1: true/false, bf/edd (should the corner anim show, who it shows)
+value2: number, number (tween length, how long they stay on screen if not 0)

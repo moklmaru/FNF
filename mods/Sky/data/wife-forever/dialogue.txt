@@ -1,0 +1,6 @@
+@wait time="1s"
+@dialogue pos="R" portrait="bf" text="beep?"
+@dialogue pos="L" portrait="sky" text="IT WORKED!!!"
+@dialogue pos="L" portrait="sky" text="THE SHIFT WORKED!!!"
+@dialogue pos="L" portrait="sky" text="Now we can be together forever, The Boyfriend!"
+@dialogue pos="R" portrait="bf" text="bop beeop?

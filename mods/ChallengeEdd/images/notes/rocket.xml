@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="rocket.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="blue0000" x="0" y="0" width="167" height="420"/>
+	<SubTexture name="blue0001" x="172" y="0" width="167" height="420"/>
+	<SubTexture name="blue0002" x="344" y="0" width="167" height="420"/>
+	<SubTexture name="blue0003" x="0" y="425" width="167" height="420"/>
+	<SubTexture name="blue0004" x="172" y="425" width="167" height="420"/>
+	<SubTexture name="green0000" x="0" y="0" width="167" height="420"/>
+	<SubTexture name="green0001" x="172" y="0" width="167" height="420"/>
+	<SubTexture name="green0002" x="344" y="0" width="167" height="420"/>
+	<SubTexture name="green0003" x="0" y="425" width="167" height="420"/>
+	<SubTexture name="green0004" x="172" y="425" width="167" height="420"/>
+	<SubTexture name="purple0000" x="0" y="0" width="167" height="420"/>
+	<SubTexture name="purple0001" x="172" y="0" width="167" height="420"/>
+	<SubTexture name="purple0002" x="344" y="0" width="167" height="420"/>
+	<SubTexture name="purple0003" x="0" y="425" width="167" height="420"/>
+	<SubTexture name="purple0004" x="172" y="425" width="167" height="420"/>
+	<SubTexture name="red0000" x="0" y="0" width="167" height="420"/>
+	<SubTexture name="red0001" x="172" y="0" width="167" height="420"/>
+	<SubTexture name="red0002" x="344" y="0" width="167" height="420"/>
+	<SubTexture name="red0003" x="0" y="425" width="167" height="420"/>
+	<SubTexture name="red0004" x="172" y="425" width="167" height="420"/>
+</TextureAtlas>

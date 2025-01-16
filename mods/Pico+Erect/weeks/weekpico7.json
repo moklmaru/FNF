@@ -1,0 +1,43 @@
+{
+	"songs": [
+		[
+			"Ugh (Pico Mix)",
+			"pico",
+			"tankman",
+			[
+				206,
+				213,
+				255
+			]
+		],
+		[
+			"Guns (Pico Mix)",
+			"pico",
+			"tankman",
+			[
+				206,
+				213,
+				255
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"difficulties": "hard",
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"storyName": "Your New Week",
+	"weekName": "Custom Week",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": true,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}

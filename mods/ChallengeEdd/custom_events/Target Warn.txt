@@ -1,0 +1,4 @@
+the warning for the rocket note
+
+value1: what note it displays on (0 - 3 for left, down, up, right)
+value2: nothin

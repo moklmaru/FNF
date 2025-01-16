@@ -1,0 +1,30 @@
+{
+	"storyName": "Your New Week",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "Week 4-GF",
+	"startUnlocked": true,
+	"hideStoryMode": true,
+	"songs": [
+		[
+			"Cocoa (GF-mix)",
+			"gf",
+			"parents",
+			[160, 209, 255]
+		],
+		[
+			"Eggnog (GF-mix)",
+			"gf",
+			"parents",
+			[160, 209, 255]
+		]
+	],
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Week 5-GF"
+}

@@ -1,0 +1,29 @@
+{
+	"songs": [
+		["Pico (B-Side)", "cpico", [148, 22, 83]],
+		["Philly Nice (B-Side)", "cpico", [148, 22, 83]],
+		["Blammed (B-Side)", "cpico", [148, 22, 83]]
+	],
+
+	"weekCharacters": [
+		"pico",
+		"bf2",
+		"gf2"
+	],
+	"weekBackground": "philly",
+	"difficulties": "B-Side",
+
+	"storyName": "PICO Gold",
+	"weekBefore": "weekb2",
+	"weekName": "Week 3",
+	"startUnlocked": true,
+
+	"hideStoryMode": false,
+	"hideFreeplay": false,
+	"appended": true,
+	"targets": [
+		"Pico",
+		"Philly Nice",
+		"Blammed"
+	]
+}

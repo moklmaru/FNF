@@ -1,0 +1,4 @@
+hi guys - tord (again)
+
+value1: 'rise' or 'explode' for those animations
+value2: if rise for value 1, how long it'll take

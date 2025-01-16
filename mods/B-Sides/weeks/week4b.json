@@ -1,0 +1,29 @@
+{
+	"songs": [
+		["Satin Panties (B-Side)", "cmom", [252, 150, 215]],
+		["High (B-Side)", "cmom", [252, 150, 215]],
+		["Milf (B-Side)", "cmom", [252, 150, 215]]
+	],
+	
+	"weekCharacters": [
+		"mom",
+		"bf2",
+		"gf2"
+	],
+	"weekBackground": "limo",
+	"difficulties": "B-Side",
+
+	"storyName": "Crazy Women on car",
+	"weekBefore": "weekb3",
+	"weekName": "Week 4",
+	"startUnlocked": true,
+
+	"hideStoryMode": false,
+	"hideFreeplay": false,
+	"appended": true,
+	"targets": [
+		"Satin Panties",
+		"High",
+		"Milf"
+	]
+}

@@ -7,8 +7,6 @@ art/test_x64-debug-officialrelease.bat
 
 ### VS Code
 export/*
-mods/*
-example_mods/*
 .vscode/
 .haxelib/
 .github/

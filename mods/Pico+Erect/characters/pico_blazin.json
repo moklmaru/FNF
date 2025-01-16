@@ -1,0 +1,229 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				-1
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Pico fighting stance idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				1
+			],
+			"anim": "block",
+			"fps": 24,
+			"name": "Pico Block Hit",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-20,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "dodge",
+			"indices": [
+				0,
+				1,
+				2,
+				4,
+				5
+			],
+			"name": "pico dodge"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				44,
+				-17
+			],
+			"anim": "fakeout",
+			"fps": 24,
+			"name": "fake out pico",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-2,
+				36
+			],
+			"anim": "taunt",
+			"fps": 24,
+			"name": "laughing pico",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				2,
+				33
+			],
+			"anim": "taunt-loop",
+			"fps": 24,
+			"name": "laughing pico",
+			"indices": [
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				162,
+				8
+			],
+			"anim": "punchHigh1",
+			"fps": 24,
+			"name": "punch high pico",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				172,
+				-30
+			],
+			"anim": "punchHigh2",
+			"fps": 24,
+			"name": "Punch High 2 Pico ",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				180,
+				-29
+			],
+			"anim": "punchLow1",
+			"fps": 24,
+			"name": "Punch Low Pico",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				153,
+				5
+			],
+			"anim": "punchLow2",
+			"fps": 24,
+			"name": "punch low 2 pico ",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				77,
+				-414
+			],
+			"anim": "hitHigh",
+			"fps": 24,
+			"name": "hit high pico",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				75,
+				-371
+			],
+			"anim": "hitLow",
+			"fps": 24,
+			"name": "hit low Pico",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				104,
+				-400
+			],
+			"anim": "hitSpin",
+			"fps": 24,
+			"name": "spin pico ",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				76,
+				-148
+			],
+			"anim": "uppercutPrep",
+			"fps": 24,
+			"name": "Pre-Uppercut Pico",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				90,
+				53
+			],
+			"anim": "uppercut",
+			"fps": 24,
+			"name": "uppercut pico",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				349,
+				-397
+			],
+			"anim": "uppercutHit",
+			"fps": 24,
+			"name": "uppercut hit pico",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				90,
+				53
+			],
+			"anim": "uppercut-loop",
+			"fps": 24,
+			"name": "uppercut pico",
+			"indices": [
+				14,
+				15,
+				16
+			]
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/PicoBlazin",
+	"position": [
+		30,
+		290
+	],
+	"healthicon": "pico",
+	"flip_x": true,
+	"healthbar_colors": [
+		183,
+		216,
+		85
+	],
+	"camera_position": [
+		-200,
+		350
+	],
+	"sing_duration": 999,
+	"scale": 1.05,
+	"_editor_isPlayer": true
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="bf-corner.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="BFEnterDown0000" x="0" y="0" width="520" height="514"/>
+	<SubTexture name="BFEnterDown0001" x="525" y="0" width="520" height="514"/>
+	<SubTexture name="BFEnterLeft0000" x="1050" y="0" width="521" height="514"/>
+	<SubTexture name="BFEnterLeft0001" x="0" y="519" width="521" height="514"/>
+	<SubTexture name="BFEnterRight0000" x="526" y="519" width="521" height="548"/>
+	<SubTexture name="BFEnterRight0001" x="1052" y="519" width="521" height="548"/>
+	<SubTexture name="BFEnterUp0000" x="0" y="1072" width="521" height="514"/>
+	<SubTexture name="BFEnterUp0001" x="526" y="1072" width="521" height="514"/>
+</TextureAtlas>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Untitled-1.png">
+	<!-- Created with Adobe Animate version 21.0.3.38773 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="cross0000" x="0" y="0" width="609" height="538"/>
+	<SubTexture name="cross0001" x="0" y="0" width="609" height="538"/>
+	<SubTexture name="cross0002" x="0" y="0" width="609" height="538"/>
+	<SubTexture name="cross0003" x="0" y="0" width="609" height="538"/>
+	<SubTexture name="cross0004" x="609" y="0" width="609" height="513" frameX="0" frameY="-12" frameWidth="609" frameHeight="538"/>
+	<SubTexture name="cross0005" x="1218" y="0" width="609" height="485" frameX="0" frameY="-26" frameWidth="609" frameHeight="538"/>
+	<SubTexture name="cross0006" x="0" y="538" width="609" height="463" frameX="0" frameY="-37" frameWidth="609" frameHeight="538"/>
+	<SubTexture name="cross0007" x="609" y="0" width="609" height="513" frameX="0" frameY="-12" frameWidth="609" frameHeight="538"/>
+	<SubTexture name="cross0008" x="609" y="538" width="609" height="535" frameX="0" frameY="-1" frameWidth="609" frameHeight="538"/>
+	<SubTexture name="cross0009" x="609" y="538" width="609" height="535" frameX="0" frameY="-1" frameWidth="609" frameHeight="538"/>
+	<SubTexture name="cross0010" x="609" y="538" width="609" height="535" frameX="0" frameY="-1" frameWidth="609" frameHeight="538"/>
+	<SubTexture name="cross0011" x="609" y="538" width="609" height="535" frameX="0" frameY="-1" frameWidth="609" frameHeight="538"/>
+	<SubTexture name="cross0012" x="609" y="538" width="609" height="535" frameX="0" frameY="-1" frameWidth="609" frameHeight="538"/>
+	<SubTexture name="cross0013" x="609" y="538" width="609" height="535" frameX="0" frameY="-1" frameWidth="609" frameHeight="538"/>
+	<SubTexture name="cross0014" x="609" y="538" width="609" height="535" frameX="0" frameY="-1" frameWidth="609" frameHeight="538"/>
+	<SubTexture name="cross0015" x="609" y="538" width="609" height="535" frameX="0" frameY="-1" frameWidth="609" frameHeight="538"/>
+	<SubTexture name="cross0016" x="609" y="538" width="609" height="535" frameX="0" frameY="-1" frameWidth="609" frameHeight="538"/>
+</TextureAtlas>

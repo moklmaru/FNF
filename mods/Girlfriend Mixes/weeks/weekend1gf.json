@@ -1,0 +1,24 @@
+{
+	"storyName": "Your New Week",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "Week 7-GF",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"hideStoryMode": true,
+	"songs": [
+		[
+			"Darnell (GF-mix)",
+			"gf",
+			"darnell",
+			[65, 60, 174]
+		]
+	],
+	"weekName": "Weekend 1-GF",
+	"hiddenUntilUnlocked": false
+}

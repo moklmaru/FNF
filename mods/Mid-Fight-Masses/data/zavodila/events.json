@@ -1,0 +1,41 @@
+{
+	"song": {
+		"events": [
+			[
+				14545.4545454545,
+				[
+					[
+						"Dadbattle Spotlight",
+						"1",
+						"2"
+					],
+					[
+						"Toggle Trail",
+						"",
+						"1"
+					],
+					[
+						"Toggle Trail",
+						"1",
+						"0"
+					]
+				]
+			],
+			[
+				21704.5454545455,
+				[
+					[
+						"Toggle Trail",
+						"0",
+						"0"
+					],
+					[
+						"Dadbattle Spotlight",
+						"0",
+						""
+					]
+				]
+			]
+		]
+	}
+}

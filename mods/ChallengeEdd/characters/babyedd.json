@@ -1,0 +1,169 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "BabyIdle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				62,
+				-8
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "BabyLeft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-4,
+				30
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "BabyUp",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				-100
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "BabyDown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				81,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "BabyRight",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				10
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "BabyHEY!!!",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle-loop",
+			"fps": 24,
+			"name": "BabyIdle",
+			"indices": [
+				8,
+				9,
+				10,
+				11
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				62,
+				-8
+			],
+			"anim": "singLEFT-loop",
+			"fps": 24,
+			"name": "BabyLeft",
+			"indices": [
+				2,
+				3,
+				4,
+				5
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				81,
+				0
+			],
+			"anim": "singRIGHT-loop",
+			"fps": 24,
+			"name": "BabyRight",
+			"indices": [
+				2,
+				3,
+				4,
+				5
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-8,
+				-100
+			],
+			"anim": "singDOWN-loop",
+			"fps": 24,
+			"name": "BabyDown",
+			"indices": [
+				2,
+				3,
+				4,
+				5
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-4,
+				30
+			],
+			"anim": "singUP-loop",
+			"fps": 24,
+			"name": "BabyUp",
+			"indices": [
+				2,
+				3,
+				4,
+				5
+			]
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/baby",
+	"position": [
+		0,
+		300
+	],
+	"healthicon": "babyedd",
+	"flip_x": true,
+	"healthbar_colors": [
+		51,
+		173,
+		51
+	],
+	"camera_position": [
+		40,
+		70
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

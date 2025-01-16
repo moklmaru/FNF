@@ -1,0 +1,30 @@
+{
+	"songs": [
+		[
+			"Senpai (GF-mix)",
+			"gf",
+			"senpai-pixel",
+			[255, 120, 191]
+		],
+		[
+			"Roses (GF-mix)",
+			"gf",
+			"senpai-pixel",
+			[255, 120, 191]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"difficulties": "Hard",
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"storyName": "Your New Week",
+	"weekName": "Week 6-GF",
+	"hideStoryMode": true,
+	"weekBefore": "Week 5-GF",
+	"startUnlocked": true
+}

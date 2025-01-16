@@ -1,0 +1,50 @@
+{
+	"difficulties": "B-Side",
+	"hideFreeplay": false,
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"Cocoa (B-Side)",
+			"cparents",
+			[
+				160,
+				209,
+				255
+			]
+		],
+		[
+			"Eggnog (B-Side)",
+			"cparents",
+			[
+				160,
+				209,
+				255
+			]
+		],
+		[
+			"Winter Horrorland (B-Side)",
+			"monster-b",
+			[
+				160,
+				209,
+				255
+			]
+		]
+	],
+	"startUnlocked": true,
+	"storyName": "Big Trouble",
+	"weekBackground": "christmas",
+	"weekBefore": "weekb4",
+	"weekCharacters": [
+		"parents-christmas",
+		"bf2",
+		"gf2"
+	],
+	"weekName": "Week 5",
+	"appended": true,
+	"targets": [
+		"Cocoa",
+		"Eggnog",
+		"Winter Horrorland"
+	]
+}

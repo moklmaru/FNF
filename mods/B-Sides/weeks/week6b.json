@@ -1,0 +1,50 @@
+{
+	"difficulties": "B-Side",
+	"hideFreeplay": false,
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"Senpai (B-Side)",
+			"csenpai-pixel",
+			[
+				255,
+				120,
+				191
+			]
+		],
+		[
+			"Roses (B-Side)",
+			"csenpai-pixel",
+			[
+				255,
+				120,
+				191
+			]
+		],
+		[
+			"Thorns (B-Side)",
+			"cspirit-pixel",
+			[
+				255,
+				120,
+				191
+			]
+		]
+	],
+	"startUnlocked": true,
+	"storyName": "Crazy Simp guy",
+	"weekBackground": "school",
+	"weekBefore": "weekb5",
+	"weekCharacters": [
+		"senpai",
+		"bf2",
+		"gf2"
+	],
+	"weekName": "Week 6",
+	"appended": true,
+	"targets": [
+		"Senpai",
+		"Roses",
+		"Thorns"
+	]
+}

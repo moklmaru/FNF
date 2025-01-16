@@ -1,0 +1,36 @@
+{
+	"storyName": "You Got This",
+	"difficulties": "B-Side",
+	"hideFreeplay": false,
+	"weekBackground": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "001",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"Tutorial (B-Side)",
+			"gf-b",
+			[
+				184,
+				141,
+				230
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Tutorial GF lol",
+	"hiddenUntilUnlocked": false,
+	"appended": true,
+	"targets": [
+		"Tutorial"
+	]
+}

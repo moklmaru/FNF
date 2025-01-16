@@ -1,0 +1,56 @@
+{
+	"storyName": "Rockstar",
+	"difficulties": "B-Side",
+	"hideFreeplay": false,
+	"weekBackground": "week1b",
+	"weekBefore": "tutorialb-redux",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"Bopeebo (B-Side)",
+			"dad-b",
+			[
+				253,
+				203,
+				224
+			]
+		],
+		[
+			"Fresh (B-Side)",
+			"dad-b",
+			[
+				253,
+				203,
+				224
+			]
+		],
+		[
+			"Dad Battle (B-Side)",
+			"dad-b",
+			[
+				253,
+				203,
+				224
+			]
+		]
+	],
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Week 1",
+	"appended": true,
+	"targets": [
+		"Bopeebo",
+		"Fresh",
+		"Dad Battle"
+	]
+}

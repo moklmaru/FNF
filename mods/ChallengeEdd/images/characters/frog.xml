@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="frog.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="TomFrogDown0000" x="0" y="0" width="446" height="428"/>
+	<SubTexture name="TomFrogDown0001" x="448" y="0" width="446" height="428"/>
+	<SubTexture name="TomFrogDown0002" x="896" y="0" width="446" height="428"/>
+	<SubTexture name="TomFrogDown0003" x="896" y="0" width="446" height="428"/>
+	<SubTexture name="TomFrogDown0004" x="1344" y="0" width="446" height="428"/>
+	<SubTexture name="TomFrogDown0005" x="1344" y="0" width="446" height="428"/>
+	<SubTexture name="TomFrogHEY!!0000" x="1792" y="0" width="686" height="717"/>
+	<SubTexture name="TomFrogHEY!!0001" x="2480" y="0" width="686" height="717"/>
+	<SubTexture name="TomFrogHEY!!0002" x="3168" y="0" width="686" height="717"/>
+	<SubTexture name="TomFrogHEY!!0003" x="0" y="719" width="686" height="717"/>
+	<SubTexture name="TomFrogHEY!!0004" x="688" y="719" width="686" height="717"/>
+	<SubTexture name="TomFrogHEY!!0005" x="688" y="719" width="686" height="717"/>
+	<SubTexture name="TomFrogHEY!!0006" x="1376" y="719" width="686" height="717"/>
+	<SubTexture name="TomFrogHEY!!0007" x="1376" y="719" width="686" height="717"/>
+	<SubTexture name="TomFrogHEY!!0008" x="2064" y="719" width="686" height="717"/>
+	<SubTexture name="TomFrogHEY!!0009" x="2064" y="719" width="686" height="717"/>
+	<SubTexture name="TomFrogHEY!!0010" x="2752" y="719" width="686" height="717"/>
+	<SubTexture name="TomFrogHEY!!0011" x="2752" y="719" width="686" height="717"/>
+	<SubTexture name="TomFrogHEY!!0012" x="0" y="1438" width="686" height="717"/>
+	<SubTexture name="TomFrogHEY!!0013" x="0" y="1438" width="686" height="717"/>
+	<SubTexture name="TomFrogHEY!!0014" x="688" y="1438" width="686" height="717"/>
+	<SubTexture name="TomFrogHEY!!0015" x="688" y="1438" width="686" height="717"/>
+	<SubTexture name="TomFrogHEY!!0016" x="1376" y="1438" width="686" height="717"/>
+	<SubTexture name="TomFrogHEY!!0017" x="1376" y="1438" width="686" height="717"/>
+	<SubTexture name="TomFrogIdle0000" x="2064" y="1438" width="439" height="420"/>
+	<SubTexture name="TomFrogIdle0001" x="2064" y="1438" width="439" height="420"/>
+	<SubTexture name="TomFrogIdle0002" x="2505" y="1438" width="439" height="420"/>
+	<SubTexture name="TomFrogIdle0003" x="2505" y="1438" width="439" height="420"/>
+	<SubTexture name="TomFrogIdle0004" x="2946" y="1438" width="439" height="420"/>
+	<SubTexture name="TomFrogIdle0005" x="2946" y="1438" width="439" height="420"/>
+	<SubTexture name="TomFrogIdle0006" x="3387" y="1438" width="439" height="420"/>
+	<SubTexture name="TomFrogIdle0007" x="3387" y="1438" width="439" height="420"/>
+	<SubTexture name="TomFrogIdle0008" x="0" y="2157" width="439" height="420"/>
+	<SubTexture name="TomFrogIdle0009" x="0" y="2157" width="439" height="420"/>
+	<SubTexture name="TomFrogIdle0010" x="441" y="2157" width="439" height="420"/>
+	<SubTexture name="TomFrogIdle0011" x="441" y="2157" width="439" height="420"/>
+	<SubTexture name="TomFrogLeft0000" x="882" y="2157" width="546" height="633"/>
+	<SubTexture name="TomFrogLeft0001" x="1430" y="2157" width="546" height="633"/>
+	<SubTexture name="TomFrogLeft0002" x="1978" y="2157" width="546" height="633"/>
+	<SubTexture name="TomFrogLeft0003" x="1978" y="2157" width="546" height="633"/>
+	<SubTexture name="TomFrogLeft0004" x="2526" y="2157" width="546" height="633"/>
+	<SubTexture name="TomFrogLeft0005" x="2526" y="2157" width="546" height="633"/>
+	<SubTexture name="TomFrogRight0000" x="3074" y="2157" width="545" height="634"/>
+	<SubTexture name="TomFrogRight0001" x="0" y="2793" width="545" height="634"/>
+	<SubTexture name="TomFrogRight0002" x="547" y="2793" width="545" height="634"/>
+	<SubTexture name="TomFrogRight0003" x="547" y="2793" width="545" height="634"/>
+	<SubTexture name="TomFrogRight0004" x="1094" y="2793" width="545" height="634"/>
+	<SubTexture name="TomFrogRight0005" x="1094" y="2793" width="545" height="634"/>
+	<SubTexture name="TomFrogUp0000" x="1641" y="2793" width="392" height="687"/>
+	<SubTexture name="TomFrogUp0001" x="2035" y="2793" width="392" height="687"/>
+	<SubTexture name="TomFrogUp0002" x="2429" y="2793" width="392" height="687"/>
+	<SubTexture name="TomFrogUp0003" x="2429" y="2793" width="392" height="687"/>
+	<SubTexture name="TomFrogUp0004" x="2823" y="2793" width="392" height="687"/>
+	<SubTexture name="TomFrogUp0005" x="2823" y="2793" width="392" height="687"/>
+</TextureAtlas>

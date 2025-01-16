@@ -1,0 +1,87 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [-129, 22],
+			"anim": "cheer",
+			"fps": 24,
+			"name": "ComboCheer",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [-60, -10],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-60, 19],
+			"anim": "knifeRaise",
+			"fps": 24,
+			"name": "KnifeRaise",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-60, -20],
+			"anim": "ja",
+			"fps": 24,
+			"name": "Laugh",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [25, 21],
+			"anim": "knifelower",
+			"fps": 16,
+			"name": "KnifeLower",
+			"indices": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+		},
+		{
+			"loop": true,
+			"offsets": [-119, 22],
+			"anim": "knife",
+			"fps": 18,
+			"name": "KnifeIdle",
+			"indices": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+		},
+		{
+			"offsets": [-50, -30],
+			"loop": false,
+			"fps": 24,
+			"anim": "ja2",
+			"indices": [7, 8, 9, 10, 11, 11, 11, 11, 11, 11, 11, 11],
+			"name": "Laugh"
+		},
+		{
+			"loop": false,
+			"offsets": [-70, 0],
+			"anim": "QUERISAWEY",
+			"fps": 24,
+			"name": "Laugh",
+			"indices": [8, 9, 10, 11, 7, 8, 9, 10, 11, 7, 8, 9, 10, 11, 7, 8, 9, 10, 11, 7, 8, 9, 10, 11]
+		},
+		{
+			"loop": false,
+			"offsets": [-82, 1],
+			"anim": "fawn",
+			"fps": 18,
+			"name": "ComboFawn",
+			"indices": [0, 1, 2, 3, 4, 5, 6, 6, 6, 6, 6, 6]
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/nene",
+	"position": [-100, 150],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [165, 0, 77],
+	"camera_position": [10, -20],
+	"sing_duration": 4,
+	"scale": 0.55,
+	"_editor_isPlayer": false
+}

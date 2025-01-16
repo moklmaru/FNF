@@ -1,0 +1,199 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "sky annoyed idle"
+		},
+		{
+			"offsets": [
+				11,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "sky annoyed up"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle-alt",
+			"loop": false,
+			"name": "sky annoyed alt idle"
+		},
+		{
+			"offsets": [
+				13,
+				-1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"name": "sky annoyed alt down"
+		},
+		{
+			"offsets": [
+				13,
+				-1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "sky annoyed down"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "sky annoyed alt right"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "sky annoyed right"
+		},
+		{
+			"offsets": [
+				-1,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"loop": false,
+			"name": "sky annoyed alt left"
+		},
+		{
+			"offsets": [
+				-1,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "sky annoyed left"
+		},
+		{
+			"offsets": [
+				11,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP-alt",
+			"loop": false,
+			"name": "sky annoyed alt up"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "grr",
+			"loop": false,
+			"name": "sky annoyed grr"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "huh",
+			"loop": false,
+			"name": "sky annoyed huh"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "oh",
+			"loop": false,
+			"name": "sky annoyed oh"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [17, 17],
+			"fps": 24,
+			"anim": "idle-ugh",
+			"loop": false,
+			"name": "sky annoyed ugh"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "ugh",
+			"loop": false,
+			"name": "sky annoyed ugh"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "devil",
+			"loop": false,
+			"name": "sky annoyed manifesting"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/sky-mad",
+	"position": [
+		0,
+		50
+	],
+	"healthicon": "sky",
+	"flip_x": false,
+	"healthbar_colors": [
+		115,
+		120,
+		255
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

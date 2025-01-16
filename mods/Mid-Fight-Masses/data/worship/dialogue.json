@@ -1,0 +1,52 @@
+{
+	"dialogue": [
+		{
+			"sound": "",
+			"speed": 0.045,
+			"portrait": "sarvupset",
+			"boxState": "normal",
+			"expression": "excited",
+			"text": "dammit!!"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "too bad"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "huhserv",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "you like pissing off people, huh?"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "no... you're the one who said the n-word"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "sarvmad",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "i don't give a fuck."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "sarvmad",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "i will not spare you this time."
+		}
+	]
+}

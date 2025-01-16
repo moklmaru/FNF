@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="mark.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="MarkIdle0000" x="0" y="0" width="326" height="663"/>
+	<SubTexture name="MarkIdle0001" x="0" y="0" width="326" height="663"/>
+	<SubTexture name="MarkIdle0002" x="331" y="0" width="326" height="663"/>
+	<SubTexture name="MarkIdle0003" x="331" y="0" width="326" height="663"/>
+	<SubTexture name="MarkIdle0004" x="662" y="0" width="326" height="663"/>
+	<SubTexture name="MarkIdle0005" x="662" y="0" width="326" height="663"/>
+	<SubTexture name="MarkIdle0006" x="0" y="668" width="326" height="663"/>
+	<SubTexture name="MarkIdle0007" x="0" y="668" width="326" height="663"/>
+	<SubTexture name="MarkIdle0008" x="331" y="668" width="326" height="663"/>
+	<SubTexture name="MarkIdle0009" x="331" y="668" width="326" height="663"/>
+	<SubTexture name="MarkIdle0010" x="662" y="668" width="326" height="663"/>
+	<SubTexture name="MarkIdle0011" x="662" y="668" width="326" height="663"/>
+	<SubTexture name="MarkIdle0012" x="331" y="668" width="326" height="663"/>
+	<SubTexture name="MarkIdle0013" x="331" y="668" width="326" height="663"/>
+</TextureAtlas>

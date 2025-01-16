@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="dooropen.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="Door Opening0000" x="0" y="0" width="205" height="255"/>
+	<SubTexture name="Door Opening0001" x="0" y="0" width="205" height="255"/>
+	<SubTexture name="Door Opening0002" x="207" y="0" width="205" height="255"/>
+	<SubTexture name="Door Opening0003" x="207" y="0" width="205" height="255"/>
+	<SubTexture name="Door Opening0004" x="0" y="257" width="205" height="255"/>
+	<SubTexture name="Door Opening0005" x="0" y="257" width="205" height="255"/>
+</TextureAtlas>

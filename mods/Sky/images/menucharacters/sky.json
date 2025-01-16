@@ -1,0 +1,11 @@
+{
+	"confirm_anim": "sky",
+	"idle_anim": "sky",
+	"position": [
+		140,
+		150
+	],
+	"scale": 0.5,
+	"image": "Menu_Sky",
+	"flipX": false
+}

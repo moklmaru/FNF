@@ -1,0 +1,100 @@
+{
+	"dialogue": [
+		{
+			"sound": "",
+			"speed": 0.055,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "now... where the fuck am i?"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "chillselever",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "what's up, dude?"
+		},
+		{
+			"sound": "",
+			"speed": 0,
+			"portrait": "bf",
+			"boxState": "angry",
+			"expression": "shocked",
+			"text": "!!!!ahhhhhhhhhh!!!!!"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "oh, who are you?"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "laughingselever",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "what's up, man? my name is selever"
+		},
+		{
+			"sound": "",
+			"speed": 0.045,
+			"portrait": "chillselever",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "i just wanted to know about you"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "you seem cool..."
+		},
+		{
+			"sound": "",
+			"speed": 0.065,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "unlike these two i had to fight...."
+		},
+		{
+			"sound": "",
+			"speed": 0.065,
+			"portrait": "upsetselever",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "what... two?"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "just forget it!!"
+		},
+		{
+			"sound": "",
+			"speed": 0.04,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "wanna do some rapping?"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "xdselever",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "sure, man!!"
+		}
+	]
+}

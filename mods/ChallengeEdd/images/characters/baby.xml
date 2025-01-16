@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="baby.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="BabyDown0000" x="0" y="0" width="430" height="337"/>
+	<SubTexture name="BabyDown0001" x="432" y="0" width="430" height="337"/>
+	<SubTexture name="BabyDown0002" x="864" y="0" width="430" height="337"/>
+	<SubTexture name="BabyDown0003" x="864" y="0" width="430" height="337"/>
+	<SubTexture name="BabyDown0004" x="1296" y="0" width="430" height="337"/>
+	<SubTexture name="BabyDown0005" x="1296" y="0" width="430" height="337"/>
+	<SubTexture name="BabyHEY!!!0000" x="1728" y="0" width="288" height="443"/>
+	<SubTexture name="BabyHEY!!!0001" x="1728" y="0" width="288" height="443"/>
+	<SubTexture name="BabyHEY!!!0002" x="0" y="445" width="288" height="443"/>
+	<SubTexture name="BabyHEY!!!0003" x="0" y="445" width="288" height="443"/>
+	<SubTexture name="BabyHEY!!!0004" x="290" y="445" width="288" height="443"/>
+	<SubTexture name="BabyHEY!!!0005" x="290" y="445" width="288" height="443"/>
+	<SubTexture name="BabyHEY!!!0006" x="580" y="445" width="288" height="443"/>
+	<SubTexture name="BabyHEY!!!0007" x="580" y="445" width="288" height="443"/>
+	<SubTexture name="BabyHEY!!!0008" x="290" y="445" width="288" height="443"/>
+	<SubTexture name="BabyHEY!!!0009" x="290" y="445" width="288" height="443"/>
+	<SubTexture name="BabyHEY!!!0010" x="580" y="445" width="288" height="443"/>
+	<SubTexture name="BabyHEY!!!0011" x="580" y="445" width="288" height="443"/>
+	<SubTexture name="BabyIdle0000" x="870" y="445" width="378" height="431"/>
+	<SubTexture name="BabyIdle0001" x="870" y="445" width="378" height="431"/>
+	<SubTexture name="BabyIdle0002" x="1250" y="445" width="378" height="431"/>
+	<SubTexture name="BabyIdle0003" x="1250" y="445" width="378" height="431"/>
+	<SubTexture name="BabyIdle0004" x="1630" y="445" width="378" height="431"/>
+	<SubTexture name="BabyIdle0005" x="1630" y="445" width="378" height="431"/>
+	<SubTexture name="BabyIdle0006" x="0" y="890" width="378" height="431"/>
+	<SubTexture name="BabyIdle0007" x="0" y="890" width="378" height="431"/>
+	<SubTexture name="BabyIdle0008" x="380" y="890" width="378" height="431"/>
+	<SubTexture name="BabyIdle0009" x="380" y="890" width="378" height="431"/>
+	<SubTexture name="BabyIdle0010" x="760" y="890" width="378" height="431"/>
+	<SubTexture name="BabyIdle0011" x="760" y="890" width="378" height="431"/>
+	<SubTexture name="BabyLeft0000" x="1140" y="890" width="430" height="424"/>
+	<SubTexture name="BabyLeft0001" x="1572" y="890" width="430" height="424"/>
+	<SubTexture name="BabyLeft0002" x="0" y="1323" width="430" height="424"/>
+	<SubTexture name="BabyLeft0003" x="0" y="1323" width="430" height="424"/>
+	<SubTexture name="BabyLeft0004" x="432" y="1323" width="430" height="424"/>
+	<SubTexture name="BabyLeft0005" x="432" y="1323" width="430" height="424"/>
+	<SubTexture name="BabyRight0000" x="864" y="1323" width="413" height="435"/>
+	<SubTexture name="BabyRight0001" x="1279" y="1323" width="413" height="435"/>
+	<SubTexture name="BabyRight0002" x="0" y="1760" width="413" height="435"/>
+	<SubTexture name="BabyRight0003" x="0" y="1760" width="413" height="435"/>
+	<SubTexture name="BabyRight0004" x="415" y="1760" width="413" height="435"/>
+	<SubTexture name="BabyRight0005" x="415" y="1760" width="413" height="435"/>
+	<SubTexture name="BabyUp0000" x="830" y="1760" width="291" height="466"/>
+	<SubTexture name="BabyUp0001" x="1123" y="1760" width="291" height="466"/>
+	<SubTexture name="BabyUp0002" x="1416" y="1760" width="291" height="466"/>
+	<SubTexture name="BabyUp0003" x="1416" y="1760" width="291" height="466"/>
+	<SubTexture name="BabyUp0004" x="1709" y="1760" width="291" height="466"/>
+	<SubTexture name="BabyUp0005" x="1709" y="1760" width="291" height="466"/>
+	<SubTexture name="BabyUp0006" x="1416" y="1760" width="291" height="466"/>
+	<SubTexture name="BabyUp0007" x="1416" y="1760" width="291" height="466"/>
+	<SubTexture name="BabyUp0008" x="1709" y="1760" width="291" height="466"/>
+	<SubTexture name="BabyUp0009" x="1709" y="1760" width="291" height="466"/>
+	<SubTexture name="BabyUp0010" x="1416" y="1760" width="291" height="466"/>
+	<SubTexture name="BabyUp0011" x="1416" y="1760" width="291" height="466"/>
+</TextureAtlas>

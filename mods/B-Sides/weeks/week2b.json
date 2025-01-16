@@ -1,0 +1,55 @@
+{
+	"storyName": "Phantom Arcade",
+	"difficulties": "B-Side",
+	"hideFreeplay": false,
+	"weekBackground": "week2b",
+	"weekBefore": "",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"Spookeez (B-Side)",
+			"spooky-b",
+			[
+				84,
+				181,
+				150
+			]
+		],
+		[
+			"South (B-Side)",
+			"spooky-b",
+			[
+				84,
+				181,
+				150
+			]
+		],
+		[
+			"Shiver",
+			"monster-b",
+			[
+				170,
+				255,
+				0
+			]
+		]
+	],
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Week 2b",
+	"appended": true,
+	"targets": [
+		"Spookeez",
+		"South"
+	]
+}

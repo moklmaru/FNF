@@ -1,0 +1,169 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "BabyIdle"
+		},
+		{
+			"offsets": [
+				-10,
+				-8
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "BabyLeft"
+		},
+		{
+			"offsets": [
+				-73,
+				30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "BabyUp"
+		},
+		{
+			"offsets": [
+				60,
+				-100
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "BabyDown"
+		},
+		{
+			"offsets": [
+				-42,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "BabyRight"
+		},
+		{
+			"offsets": [
+				-81,
+				10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "BabyHEY!!!"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle-loop",
+			"indices": [
+				8,
+				9,
+				10,
+				11
+			],
+			"name": "BabyIdle"
+		},
+		{
+			"offsets": [
+				-10,
+				-8
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singLEFT-loop",
+			"indices": [
+				2,
+				3,
+				4,
+				5
+			],
+			"name": "BabyLeft"
+		},
+		{
+			"offsets": [
+				-42,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singRIGHT-loop",
+			"indices": [
+				2,
+				3,
+				4,
+				5
+			],
+			"name": "BabyRight"
+		},
+		{
+			"offsets": [
+				60,
+				-100
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singDOWN-loop",
+			"indices": [
+				2,
+				3,
+				4,
+				5
+			],
+			"name": "BabyDown"
+		},
+		{
+			"offsets": [
+				-73,
+				30
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singUP-loop",
+			"indices": [
+				2,
+				3,
+				4,
+				5
+			],
+			"name": "BabyUp"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/baby",
+	"position": [
+		0,
+		300
+	],
+	"healthicon": "babyedd",
+	"flip_x": true,
+	"healthbar_colors": [
+		51,
+		173,
+		51
+	],
+	"camera_position": [
+		40,
+		70
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

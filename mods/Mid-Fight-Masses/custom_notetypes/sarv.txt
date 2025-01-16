@@ -1,0 +1,16 @@
+texture = "noteSkins/NOTE_assets2"
+hitHealth = -0.1
+missHealth = 0
+earlyHitMult = 0
+lateHitMult = 0
+lowPriority = true
+blockHit = false
+offsetX = 0
+offsetY = 0
+offsetAngle = 0
+multAlpha = 1
+multSpeed = 1
+ratingDisabled = true
+noAnimation = true
+noMissAnimation = true
+hitCausesMiss = true

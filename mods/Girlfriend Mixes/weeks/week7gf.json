@@ -1,0 +1,38 @@
+{
+	"storyName": "Your New Week",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "Week 6-GF",
+	"startUnlocked": true,
+	"hideStoryMode": true,
+	"songs": [
+		[
+			"Ugh (GF-mix)",
+			"gf",
+			"tankman",
+			[
+				246,
+				182,
+				4
+			]
+		],
+		[
+			"Guns (GF-mix)",
+			"gf",
+			"tankman",
+			[
+				246,
+				182,
+				4
+			]
+		]
+	],
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"weekName": "Week 7-GF",
+	"hiddenUntilUnlocked": false
+}

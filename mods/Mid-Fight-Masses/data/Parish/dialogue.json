@@ -1,0 +1,68 @@
+{
+	"dialogue": [
+		{
+			"sound": "",
+			"speed": 0.055,
+			"portrait": "sarvsmiling",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "hi kid!"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "i'm not a kid..."
+		},
+		{
+			"sound": "",
+			"speed": 0.055,
+			"portrait": "huhserv",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "huh?"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "yeah."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "huhserv",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "nigga, what the fuck are you talking about?"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "n-word?"
+		},
+		{
+			"sound": "",
+			"speed": 0.055,
+			"portrait": "sarvmad",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "yeah...."
+		},
+		{
+			"sound": "",
+			"speed": 0.115,
+			"portrait": "sarvmad",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "what are you gonna do about it."
+		}
+	]
+}

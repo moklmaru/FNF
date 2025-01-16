@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="bf-groundscene.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="BF Ground Shaking0000" x="0" y="0" width="419" height="398"/>
+	<SubTexture name="BF Ground Shaking0001" x="424" y="0" width="419" height="398"/>
+	<SubTexture name="BF Ground Shaking0002" x="848" y="0" width="419" height="398"/>
+	<SubTexture name="BF Ground Shaking0003" x="1272" y="0" width="419" height="398"/>
+	<SubTexture name="BF Ground Shaking0004" x="0" y="403" width="419" height="398"/>
+	<SubTexture name="BF Look At Tord0000" x="424" y="403" width="403" height="412"/>
+	<SubTexture name="BF Look At Tord0001" x="832" y="403" width="403" height="412"/>
+	<SubTexture name="BF Look At Tord0002" x="1240" y="403" width="403" height="412"/>
+	<SubTexture name="BF Look At Tord0003" x="0" y="820" width="403" height="412"/>
+	<SubTexture name="BF Look At Tord0004" x="408" y="820" width="403" height="412"/>
+	<SubTexture name="BF Look At Tord0005" x="816" y="820" width="403" height="412"/>
+	<SubTexture name="BF Look At Tord0006" x="1224" y="820" width="403" height="412"/>
+	<SubTexture name="BF LookUp0000" x="1632" y="820" width="391" height="417"/>
+</TextureAtlas>

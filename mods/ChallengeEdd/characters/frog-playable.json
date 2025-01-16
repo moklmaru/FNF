@@ -1,0 +1,169 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "TomFrogIdle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				89,
+				212
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "TomFrogLeft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				4,
+				-13
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "TomFrogDown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				267
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "TomFrogUp",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				53,
+				212
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "TomFrogRight",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				127,
+				296
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "TomFrogHEY!!",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle-loop",
+			"fps": 24,
+			"name": "TomFrogIdle",
+			"indices": [
+				8,
+				9,
+				10,
+				11
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				89,
+				212
+			],
+			"anim": "singLEFT-loop",
+			"fps": 24,
+			"name": "TomFrogLeft",
+			"indices": [
+				2,
+				3,
+				4,
+				5
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				53,
+				214
+			],
+			"anim": "singRIGHT-loop",
+			"fps": 24,
+			"name": "TomFrogRight",
+			"indices": [
+				2,
+				3,
+				4,
+				5
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-20,
+				267
+			],
+			"anim": "singUP-loop",
+			"fps": 24,
+			"name": "TomFrogUp",
+			"indices": [
+				2,
+				3,
+				4,
+				5
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				4,
+				-13
+			],
+			"anim": "singDOWN-loop",
+			"fps": 24,
+			"name": "TomFrogDown",
+			"indices": [
+				2,
+				3,
+				4,
+				5
+			]
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/frog",
+	"position": [
+		0,
+		320
+	],
+	"healthicon": "tom",
+	"flip_x": true,
+	"healthbar_colors": [
+		18,
+		93,
+		217
+	],
+	"camera_position": [
+		20,
+		-80
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

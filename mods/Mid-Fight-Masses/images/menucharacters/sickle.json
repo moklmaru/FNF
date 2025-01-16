@@ -1,0 +1,11 @@
+{
+	"idle_anim": "M Sickle Bop idle",
+	"image": "Sickle",
+	"position": [
+		101,
+		-30
+	],
+	"flipX": false,
+	"scale": 1,
+	"confirm_anim": "M Sickle Bop idle"
+}

@@ -1,0 +1,36 @@
+{
+	"storyName": "Your New Week",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "Week 2-GF",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"hideStoryMode": true,
+	"songs": [
+		[
+			"Pico (GF-mix)",
+			"gf",
+			"pico",
+			[148, 22, 83]
+		],
+		[
+			"Philly-Nice (GF-mix)",
+			"gf",
+			"pico",
+			[148, 22, 83]
+		],
+		[
+			"Blammed (GF-mix)",
+			"gf",
+			"pico",
+			[148, 22, 83]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Week 3-GF"
+}

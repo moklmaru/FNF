@@ -1,0 +1,9 @@
+{
+	"name": "Girfriend Mixes",
+	"description": "A collection of familiar songs, GF style!",
+	"restart":false,
+	"runsGlobally": false,
+	"color": [170, 0, 255],
+	"discordRPC": "863222024192262205",
+	"iconFramerate": 10
+}

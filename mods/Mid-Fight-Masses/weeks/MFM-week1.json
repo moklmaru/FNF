@@ -1,0 +1,59 @@
+{
+	"songs": [
+		[
+			"Parish",
+			"sarv",
+			[
+				255,
+				133,
+				233
+			]
+		],
+		[
+			"worship",
+			"sarvdark",
+			[
+				255,
+				153,
+				195
+			]
+		],
+		[
+			"zavodila",
+			"ruv",
+			[
+				155,
+				140,
+				153
+			]
+		],
+		[
+			"gospel",
+			"hotsarv",
+			[
+				255,
+				73,
+				133
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "church",
+	"difficulties": "hard, repent",
+	"weekCharacters": [
+		"sickle",
+		"",
+		"bf"
+	],
+	"storyName": "the church",
+	"weekName": "huh? what do i put here?",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "",
+	"startUnlocked": true
+}

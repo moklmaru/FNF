@@ -1,0 +1,48 @@
+{
+	"storyName": "Week 1-GF",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"songs": [
+		[
+			"Bopeebo (GF-mix)",
+			"gf",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Fresh (GF-mix)",
+			"gf",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Dad-Battle (GF-mix)",
+			"gf",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"hideStoryMode": true,
+	"hiddenUntilUnlocked": false,
+	"weekName": "Week 1-GF"
+}

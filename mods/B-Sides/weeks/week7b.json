@@ -1,0 +1,56 @@
+{
+	"storyName": "Biker Gang",
+	"difficulties": "B-Side",
+	"hideFreeplay": false,
+	"weekBackground": "week7b",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"Ugh (B-Side)",
+			"ctankman",
+			[
+				206,
+				113,
+				0
+			]
+		],
+		[
+			"Guns (B-Side)",
+			"ctankman",
+			[
+				206,
+				113,
+				0
+			]
+		],
+		[
+			"Stress (B-Side)",
+			"ctankman",
+			[
+				206,
+				113,
+				0
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Week 7",
+	"hiddenUntilUnlocked": false,
+	"appended": true,
+	"targets": [
+		"Ugh",
+		"Guns",
+		"Stress"
+	]
+}

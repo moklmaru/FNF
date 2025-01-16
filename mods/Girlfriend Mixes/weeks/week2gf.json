@@ -1,0 +1,30 @@
+{
+	"storyName": "Week 2-GF",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "Week 1-GF",
+	"startUnlocked": true,
+	"songs": [
+		[
+			"Spookeez (GF-mix)",
+			"gf",
+			"spooky",
+			[34, 51, 68]
+		],
+		[
+			"South (GF-mix)",
+			"gf",
+			"spooky",
+			[34, 51, 68]
+		]
+	],
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"hideStoryMode": true,
+	"hiddenUntilUnlocked": false,
+	"weekName": "Week 2-GF"
+}

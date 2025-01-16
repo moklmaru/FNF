@@ -1,0 +1,6 @@
+hi guys - tord
+
+
+value1: drop/explode
+drop = tord drops from plane
+explode = tord when the bot explodes

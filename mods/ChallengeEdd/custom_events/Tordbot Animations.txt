@@ -1,0 +1,4 @@
+hi guys - tord
+
+value1: animation name
+value2: play over itself if interrupted

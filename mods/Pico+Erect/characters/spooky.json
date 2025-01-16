@@ -1,0 +1,63 @@
+{
+	"animations": [
+		{
+			"offsets": [65, 27],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "Cheer"
+		},
+		{
+			"offsets": [131, -10],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "SingLEFT"
+		},
+		{
+			"offsets": [-130, -14],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "SingRIGHT"
+		},
+		{
+			"offsets": [-30, -140],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "SingDOWN"
+		},
+		{
+			"offsets": [-25, 22],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "SingUP"
+		},
+		{
+			"loop": false,
+			"offsets": [0, -1],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
+		}
+	],
+	"vocals_file": "spooky",
+	"no_antialiasing": false,
+	"image": "characters/SpookyKids",
+	"position": [0, 200],
+	"healthicon": "spooky",
+	"flip_x": false,
+	"healthbar_colors": [213, 126, 0],
+	"camera_position": [0, 0],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

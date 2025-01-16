@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="pack.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="eddicon0000" x="0" y="0" width="150" height="150"/>
+	<SubTexture name="eddicon0001" x="150" y="0" width="150" height="150"/>
+</TextureAtlas>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="port.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="default0000" x="0" y="0" width="365" height="314"/>
+	<SubTexture name="default0001" x="365" y="0" width="365" height="314"/>
+	<SubTexture name="default0002" x="0" y="314" width="365" height="314"/>
+	<SubTexture name="default0003" x="365" y="314" width="365" height="314"/>
+	<SubTexture name="default0004" x="0" y="628" width="365" height="314"/>
+	<SubTexture name="default0005" x="365" y="628" width="365" height="314"/>
+</TextureAtlas>

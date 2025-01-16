@@ -1,0 +1,6 @@
+Set a shader within the "Shaders" folder
+
+Value 1: the .frag of the shader
+Value 2: Which camera will it be on? (Same as flash)
+
+('No Shader' is a .frag with no effects, use it to remove shaders)
