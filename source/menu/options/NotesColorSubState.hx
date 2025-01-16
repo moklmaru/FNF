@@ -703,4 +703,10 @@ class NotesColorSubState extends FunkinSubState
 	function setShaderColor(value:FlxColor) dataArray[curSelectedNote][curSelectedMode] = value;
 	function getShaderColor() return dataArray[curSelectedNote][curSelectedMode];
 	function getShader() return Note.globalRgbShaders[curSelectedNote];
+
+	override function destroy()
+	{
+		Note.globalRgbShaders = [];
+		super.destroy();
+	}
 }

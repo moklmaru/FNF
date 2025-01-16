@@ -62,8 +62,6 @@ import crowplexus.iris.Iris;
  * "function triggerEvent" - Called when the song hits your event's timestamp, this is probably what you were looking for
 **/
 
-// yooooooo this file is fuckin disgusting i should probably do something about that at some point
-
 class PlayState extends FunkinState
 {
 	public static var STRUM_X = 42;
@@ -1334,7 +1332,8 @@ class PlayState extends FunkinState
 				var spawnTime: Float = songNotes[0];
 				var noteColumn: Int = Std.int(songNotes[1] % totalColumns);
 				var holdLength: Float = songNotes[2];
-				var noteType: String = songNotes[3];
+				var noteType: String = !Std.isOfType(songNotes[3], String) ? Note.defaultNoteTypes[songNotes[3]] : songNotes[3];
+
 				if (Math.isNaN(holdLength))
 					holdLength = 0.0;
 
@@ -1650,7 +1649,12 @@ class PlayState extends FunkinState
 	{
 		if(!inCutscene && !paused && !freezeCamera) {
 			FlxG.camera.followLerp = 0.04 * cameraSpeed * playbackRate;
-			if(!startingSong && !endingSong && boyfriend.getAnimationName().startsWith('idle')) {
+			var idleAnim:Bool = (
+				boyfriend.getAnimationName().startsWith('idle') 
+				|| boyfriend.getAnimationName().startsWith('danceLeft') 
+				|| boyfriend.getAnimationName().startsWith('danceRight')
+			);
+			if(!startingSong && !endingSong && idleAnim) {
 				boyfriendIdleTime += elapsed;
 				if(boyfriendIdleTime >= 0.15) { // Kind of a mercy thing for making the achievement easier to get as it's apparently frustrating to some playerss
 					boyfriendIdled = true;
@@ -3096,14 +3100,14 @@ class PlayState extends FunkinState
 		if(note != null) {
 			var strum:StrumNote = playerStrums.members[note.noteData];
 			if(strum != null)
-				spawnNoteSplash(note, strum);
+				spawnNoteSplash(strum.x, strum.y, note.noteData, note, strum);
 		}
 	}
 
-	public function spawnNoteSplash(note:Note, strum:StrumNote) {
-		var splash:NoteSplash = new NoteSplash();
+	public function spawnNoteSplash(x:Float = 0, y:Float = 0, ?data:Int = 0, ?note:Note, strum:StrumNote) {
+		var splash:NoteSplash = grpNoteSplashes.recycle(NoteSplash);
 		splash.babyArrow = strum;
-		splash.spawnSplashNote(note);
+		splash.spawnSplashNote(x, y, data, note);
 		grpNoteSplashes.add(splash);
 	}
 
@@ -3128,7 +3132,8 @@ class PlayState extends FunkinState
 		for (script in hscriptArray)
 			if(script != null)
 			{
-				script.executeFunction('onDestroy');
+				var ny:Dynamic = script.get('onDestroy');
+				if(ny != null && Reflect.isFunction(ny)) ny();
 				script.destroy();
 			}
 
@@ -3291,7 +3296,7 @@ class PlayState extends FunkinState
 		try
 		{
 			newScript = new HScript(null, file);
-			newScript.executeFunction('onCreate');
+			newScript.call('onCreate');
 			trace('initialized hscript interp successfully: $file');
 			hscriptArray.push(newScript);
 		}
