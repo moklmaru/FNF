@@ -23,8 +23,6 @@ typedef PlayerCharacter = {
 	this is the state i spend most of my time so i'm putting a bunch of effort into refactoring this
 	general foundation/inpiration is from V-Slice but i'm rewriting it to my own satisfaction
 
-	note to other devs: leave comments on your shit !!! this is nasty
-
 	-mokl
 **/
 @:access(menu.freeplay.FreeplayListEntry)
