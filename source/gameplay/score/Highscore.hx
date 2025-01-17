@@ -58,6 +58,7 @@ class Highscore
 	{
 		// Reminder that I don't need to format this song, it should come formatted!
 		songScores.set(song, score);
+		trace("Setting score for: " + song + " to " + score);
 		FlxG.save.data.songScores = songScores;
 		FlxG.save.flush();
 	}
@@ -79,6 +80,7 @@ class Highscore
 
 	public static function formatSong(song:String, diff:Int):String
 	{
+		// trace("Formatted song: " + Paths.formatToSongPath(song) + "  diff:" + Difficulty.getFilePath(diff));
 		return Paths.formatToSongPath(song) + Difficulty.getFilePath(diff);
 	}
 

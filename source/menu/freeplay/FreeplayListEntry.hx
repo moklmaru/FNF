@@ -34,7 +34,7 @@ class FreeplayListEntry extends FlxGroup
     var lastDifficulty:String;
     var altTracks:Array<FreeplayBonusTrack> = [];
     var altOpponents:Array<String> = [];
-    var usingAltIcon:Bool = false;
+    var usingAltTrack:Bool = false;
 
     var lerpIndex:Float = 0; // the index that the song will lerp to when the selection is changed
     var pos:FlxPoint = new FlxPoint(0, 0);
@@ -144,7 +144,7 @@ class FreeplayListEntry extends FlxGroup
         FlxTween.tween(icon, {alpha: alpha}, TIMING);
         FlxTween.tween(iconOffset, { x: iconPos.x, y: iconPos.y }, TIMING);
         if (!selected) icon.angle = 0; // halt the jamming...
-        if (!selected && usingAltIcon) {
+        if (!selected && usingAltTrack) {
             changeIcon(opponentChar);
         } 
     }
@@ -172,6 +172,8 @@ class FreeplayListEntry extends FlxGroup
         // this value is used for smooth transitioning, as it will lerp between the 2 song items being shifted between
         // it is a universal value shared between all entries as the list shifts
         lerpIndex = FlxMath.lerp(currentIndex, lerpIndex, Math.exp(-FlxG.elapsed * 9.6));
+
+        FreeplayState.idle = Math.abs(lerpIndex - currentIndex) < 0.05;
 
         // kill anything outside of the draw distance and bypass rest of the logic
         var min:Int = Math.round(FlxMath.bound(lerpIndex - DRAW_DISTANCE, 0, FreeplayState.songListLength)); 

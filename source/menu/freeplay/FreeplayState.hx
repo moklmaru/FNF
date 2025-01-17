@@ -9,7 +9,6 @@ import menu.freeplay.FreeplayListEntry.FreeplayBonusTrack;
 import menu.options.GameplayChangersSubstate;
 
 import flixel.util.FlxDestroyUtil;
-import openfl.utils.Assets;
 
 typedef PlayerCharacter = {
 	var index:Int;
@@ -57,17 +56,15 @@ class FreeplayState extends FunkinState {
 	private var musicPlayer:MusicPlayer;
 	private var bottomText:FlxText;
 
-	var musicBPM:Float = 102; // default menu bpm
-	// to-do: nab bpm from selected song as it previews instrumentals
-
-	var musicBuffer:Int = 120; // buffer for the music to start playing
+	static var idle:Bool = true;
+	var shouldSwitchInst:Bool = true;
 
 	override function create() {		
 		persistentUpdate = true;
 
 		PlayState.isStoryMode = false;
 		WeekData.reloadWeekFiles(false);
-		Conductor.bpm = musicBPM;
+		Conductor.bpm = 102; // default menu bpm
 
 		#if DISCORD_ALLOWED
 		DiscordClient.changePresence("In the Menus", null);
@@ -360,20 +357,17 @@ class FreeplayState extends FunkinState {
 		else if (controls.ACCEPT && !musicPlayer.playingMusic) {
 			persistentUpdate = false;
 
-			// swap into the alt track if it's difficulty is selected
-			var diff = Difficulty.getString(difficulty);
-			Difficulty.loadFromWeek();
-			if (!Difficulty.list.contains(diff)) {
-				trace('Difficulty ${diff} not found in song! (this is most likely a good thing)');
+			// swap into the alt track if it's selected
+			if (currentSong.usingAltTrack) {
+				var diff = Difficulty.getString(difficulty);
 				for (track in currentSong.altTracks) 
 				if (track.difficulties.contains(diff)) {
-					trace('Switching to ${track.name} instead');
+					trace('Switching to alt track ${track.name}');
 					currentSong = track;
 					Mods.currentModDirectory = currentSong.folder;
 					PlayState.storyWeek = currentSong.weekGlobalIndex;
 					break;
 				}
-				else trace("Nevermind, it's not a good thing. Fix your shit!");
 			}
 
 			var songLowercase:String = Paths.formatToSongPath(currentSong.name);
@@ -424,7 +418,12 @@ class FreeplayState extends FunkinState {
 			updateCharacter();
 		}
 
-		if (musicBuffer > 0) musicBuffer--;
+		// switch background music (if needed) if the menu is idle
+		if (idle && shouldSwitchInst) {
+			changeInst();
+			shouldSwitchInst = false;
+		}
+
 		super.update(elapsed);
 	}
 
@@ -575,10 +574,6 @@ class FreeplayState extends FunkinState {
 
 		var lastDiff = Difficulty.getString(difficulty);
 		difficulty = FlxMath.wrap(difficulty + change, 0, Difficulty.list.length-1);
-		#if !switch
-		score = Highscore.getScore(currentSong.name, difficulty);
-		rating = Highscore.getRating(currentSong.name, difficulty);
-		#end
 
 		difficultyPrev = Difficulty.getString(difficulty, false);
 		var displayDiff:String = Difficulty.getString(difficulty);
@@ -597,16 +592,25 @@ class FreeplayState extends FunkinState {
 					currentSong.changeIcon(track.opponentChar);
 					var altColor = FlxColor.fromRGB(205, 86, 209);
 					FlxTween.color(background, 0.2, background.color, altColor);
-					currentSong.usingAltIcon = true;
+					currentSong.usingAltTrack = true;
+					changeInst();
 					break;
-				} else if (currentSong.usingAltIcon) {
+				} else if (currentSong.usingAltTrack) {
 					currentSong.changeIcon(currentSong.opponentChar);
 					FlxTween.cancelTweensOf(background);
 					FlxTween.color(background, 0.2, background.color, currentSong.color);
-					currentSong.usingAltIcon = false;
+					currentSong.usingAltTrack = false;
+					changeInst();
 				}
 			}
 		}
+
+		var scoreTarget = if (currentSong.usingAltTrack) currentSong.altTracks[0].name else currentSong.name;
+		#if !switch
+		score = Highscore.getScore(scoreTarget, difficulty);
+		rating = Highscore.getRating(scoreTarget, difficulty);
+		trace('score: $score, rating: $rating for song $scoreTarget on difficulty ${Difficulty.getString(difficulty)}');
+		#end
 
 		positionHighscore();
 		errorText.visible = false;
@@ -625,7 +629,7 @@ class FreeplayState extends FunkinState {
 		// trace('selected song: ${currentSong.name} of week: $currentWeek');
 
 		var newColor:FlxColor = currentSong.color;
-		if(newColor != backgroundColor && !currentSong.usingAltIcon) {
+		if(newColor != backgroundColor && !currentSong.usingAltTrack) {
 			backgroundColor = newColor;
 			FlxTween.cancelTweensOf(background);
 			FlxTween.color(background, 0.5, background.color, backgroundColor);
@@ -638,14 +642,8 @@ class FreeplayState extends FunkinState {
 		PlayState.storyWeek = currentSong.weekGlobalIndex;
 		Difficulty.list = currentSong.difficulties.copy();
 
-		// draft for playing instrumentals. gotta fix modded song paths so it doesnt crash
-		// FlxG.sound.music.volume = 0;
-		// if (musicBuffer <= 0) {
-		// 	var poop:String = Highscore.formatSong(currentSong.name.toLowerCase(), difficulty);
-		// 	Song.loadFromJson(poop, currentSong.name.toLowerCase());
-		// 	if (PlayState.SONG != null) FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song), 0.8);
-		// 	musicBuffer = 120;
-		// }
+		FlxG.sound.music.volume = 0;
+		changeInst();
 
 		var savedDiff:String = currentSong.lastDifficulty;
 		var lastDiff:Int = Difficulty.list.indexOf(difficultyPrev);
@@ -660,6 +658,33 @@ class FreeplayState extends FunkinState {
 
 		changeDiff();
 		_updateSongLastDifficulty();
+	}
+
+	function changeInst() {
+		// if the menu is moving, we'll put in an IOU for the music to change once it stops
+		// this is to prevent rapid changes in music while scrolling
+		if (!idle) {
+			shouldSwitchInst = true;
+			return;
+		}
+
+		// draft for playing instrumentals. it does "work", might need some cleanup though
+		var songTarget = currentSong.name;
+		if (currentSong.altTracks.length > 0 
+		&& currentSong.altTracks[0].difficulties.contains(Difficulty.getString(difficulty))) {
+			songTarget = currentSong.altTracks[0].name;
+			Mods.currentModDirectory = currentSong.altTracks[0].folder; 
+		}
+		var poop:String = Highscore.formatSong(songTarget.toLowerCase(), difficulty);
+		Song.loadFromJson(poop, songTarget.toLowerCase());
+		if (PlayState.SONG != null) {
+			FlxG.sound.music.stop();
+			FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song), 0.8);
+			FlxG.sound.music.autoDestroy = true;
+
+			Conductor.bpm = PlayState.SONG.bpm;
+			Conductor.songPosition = 0;
+		}
 	}
 
 	inline private function _updateSongLastDifficulty()
