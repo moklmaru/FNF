@@ -609,7 +609,6 @@ class FreeplayState extends FunkinState {
 		#if !switch
 		score = Highscore.getScore(scoreTarget, difficulty);
 		rating = Highscore.getRating(scoreTarget, difficulty);
-		trace('score: $score, rating: $rating for song $scoreTarget on difficulty ${Difficulty.getString(difficulty)}');
 		#end
 
 		positionHighscore();
@@ -642,9 +641,6 @@ class FreeplayState extends FunkinState {
 		PlayState.storyWeek = currentSong.weekGlobalIndex;
 		Difficulty.list = currentSong.difficulties.copy();
 
-		FlxG.sound.music.volume = 0;
-		changeInst();
-
 		var savedDiff:String = currentSong.lastDifficulty;
 		var lastDiff:Int = Difficulty.list.indexOf(difficultyPrev);
 		if(savedDiff != null && !Difficulty.list.contains(savedDiff) && Difficulty.list.contains(savedDiff))
@@ -658,6 +654,9 @@ class FreeplayState extends FunkinState {
 
 		changeDiff();
 		_updateSongLastDifficulty();
+
+		FlxG.sound.music.volume = 0;
+		changeInst();
 	}
 
 	function changeInst() {
@@ -676,9 +675,15 @@ class FreeplayState extends FunkinState {
 			Mods.currentModDirectory = currentSong.altTracks[0].folder; 
 		}
 		var poop:String = Highscore.formatSong(songTarget.toLowerCase(), difficulty);
+		// FIX THIS // will crash sometimes if it doesnt get the right song+diff string
+		// needs a failsafe for when that data doesnt exist to prevent crashing
 		Song.loadFromJson(poop, songTarget.toLowerCase());
 		if (PlayState.SONG != null) {
-			FlxG.sound.music.stop();
+			if (FlxG.sound.music != null) {
+				FlxG.sound.music.destroy();
+				FlxG.sound.music = null;
+			}
+			
 			FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song), 0.8);
 			FlxG.sound.music.autoDestroy = true;
 

@@ -1,0 +1,53 @@
+{
+	"storyName": "Your New Week",
+	"difficulties": "hard",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"songs": [
+		[
+			"Pico (Pico mix)",
+			"pico",
+			"pico",
+			[
+				180,
+				202,
+				83
+			]
+		],
+		[
+			"Philly Nice (Pico Mix)",
+			"pico",
+			"pico",
+			[
+				180,
+				202,
+				83
+			]
+		],
+		[
+			"Blammed (Pico Mix)",
+			"pico",
+			"pico",
+			[
+				180,
+				202,
+				83
+			]
+		]
+	],
+	"hideStoryMode": true,
+	"weekName": "Custom Week",
+	"hiddenUntilUnlocked": false
+}

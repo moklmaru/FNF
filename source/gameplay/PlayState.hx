@@ -12,17 +12,17 @@ import gameplay.hud.HealthIcon;
 import gameplay.cutscenes.DialogueBoxPsych;
 import gameplay.cutscenes.VideoSprite;
 
-import gameplay.stages.dad.StageWeek1;
+import gameplay.stages.stage.StageWeek1;
 import gameplay.stages.spooky.Spooky;
-import gameplay.stages.pico.Philly;
-import gameplay.stages.mom.Limo;
-import gameplay.stages.xmas.Mall;
-import gameplay.stages.xmas.MallEvil;
-import gameplay.stages.weeb.School;
-import gameplay.stages.weeb.SchoolEvil;
+import gameplay.stages.philly.Philly;
+import gameplay.stages.limo.Limo;
+import gameplay.stages.mall.Mall;
+import gameplay.stages.mall.MallEvil;
+import gameplay.stages.school.School;
+import gameplay.stages.school.SchoolEvil;
 import gameplay.stages.tank.Tank;
-import gameplay.stages.darnell.PhillyStreets;
-import gameplay.stages.darnell.PhillyBlazin;
+import gameplay.stages.phillyStreets.PhillyStreets;
+import gameplay.stages.phillyStreets.PhillyBlazin;
 
 import modding.editors.ChartingState;
 import modding.editors.CharacterEditorState;
@@ -2467,7 +2467,7 @@ class PlayState extends FunkinState
 				canResync = false;
 				FunkinState.isStickerTransition = true;
 				FunkinState.switchState(new FreeplayState());
-				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				// FlxG.sound.playMusic(Paths.music('freakyMenu'));
 				changedDifficulty = false;
 			}
 			transitioning = true;

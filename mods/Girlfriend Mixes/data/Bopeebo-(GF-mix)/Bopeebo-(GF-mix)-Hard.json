@@ -641,7 +641,7 @@
 	"offset": 0,
 	"gameOverChar": "gf_sprinklezV2",
 	"song": "Bopeebo-(GF-mix)",
-	"stage": "mainStageErect",
+	"stage": "backstage",
 	"needsVoices": true,
 	"format": "psych_v1",
 	"speed": 2,

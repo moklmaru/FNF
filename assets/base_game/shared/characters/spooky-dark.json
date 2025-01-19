@@ -1,0 +1,90 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				65,
+				27
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "Cheer",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				131,
+				-10
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "SingLEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-130,
+				-14
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "SingRIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				-140
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "SingDOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-25,
+				22
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "SingUP",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				-1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/dark/spooky_dark",
+	"position": [
+		0,
+		200
+	],
+	"healthicon": "spooky",
+	"flip_x": false,
+	"healthbar_colors": [
+		213,
+		126,
+		0
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

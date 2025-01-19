@@ -1008,7 +1008,6 @@
 	],
 	"player2": "dad",
 	"player3": null,
-	"splashSkin": "noteSplashes",
 	"gameOverEnd": "",
 	"song": "Dad-Battle (GF Mix)",
 	"arrowSkin": "",
@@ -1021,6 +1020,6 @@
 	"gameOverLoop": "",
 	"gameOverChar": "",
 	"needsVoices": true,
-	"stage": "mainStageErect",
+	"stage": "backstage",
 	"bpm": 180
 }

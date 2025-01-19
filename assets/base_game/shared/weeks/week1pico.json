@@ -1,0 +1,53 @@
+{
+	"storyName": "Your New Week",
+	"difficulties": "hard",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": true,
+	"songs": [
+		[
+			"Bopeebo (Pico Mix)",
+			"pico",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Fresh (Pico Mix)",
+			"pico",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Dad Battle (Pico Mix)",
+			"pico",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Custom Week"
+}

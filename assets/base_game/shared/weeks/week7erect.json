@@ -1,0 +1,32 @@
+{
+	"storyName": "ulisegaswashere.jpeg",
+	"difficulties": "erect,nightmare",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": true,
+	"songs": [
+		[
+			"Ugh (Erect)",
+			"tankman",
+			[
+				206,
+				213,
+				255
+			]
+		]
+	],
+	"weekCharacters": [
+		"tankman",
+		"mom",
+		"dad"
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Custom Week"
+}

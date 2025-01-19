@@ -1,9 +1,8 @@
 package menu.options;
 
-
 import flixel.addons.display.shapes.FlxShapeCircle;
 
-import gameplay.stages.dad.StageWeek1 as BackgroundStage;
+import gameplay.stages.stage.StageWeek1 as BackgroundStage;
 
 class NoteOffsetState extends FunkinState
 {
