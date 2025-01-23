@@ -56,11 +56,13 @@ class FreeplayState extends FunkinState {
 	private var musicPlayer:MusicPlayer;
 	private var bottomText:FlxText;
 
+	static var init:Bool = true; // so the menu music isnt instantly overwritten when entering the state
 	static var idle:Bool = true;
-	var shouldSwitchInst:Bool = true;
+	var shouldSwitchInst:Bool = false;
 
 	override function create() {		
 		persistentUpdate = true;
+		init = true;
 
 		PlayState.isStoryMode = false;
 		WeekData.reloadWeekFiles(false);
@@ -655,8 +657,11 @@ class FreeplayState extends FunkinState {
 		changeDiff();
 		_updateSongLastDifficulty();
 
-		FlxG.sound.music.volume = 0;
-		changeInst();
+		if (!init) { 
+			FlxG.sound.music.volume = 0;
+			changeInst();
+		}
+		else init = false;
 	}
 
 	function changeInst() {

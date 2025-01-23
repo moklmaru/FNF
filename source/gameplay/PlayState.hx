@@ -2467,7 +2467,7 @@ class PlayState extends FunkinState
 				canResync = false;
 				FunkinState.isStickerTransition = true;
 				FunkinState.switchState(new FreeplayState());
-				// FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 				changedDifficulty = false;
 			}
 			transitioning = true;
