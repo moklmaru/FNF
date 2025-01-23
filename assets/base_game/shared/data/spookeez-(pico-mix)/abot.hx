@@ -3,6 +3,8 @@ import gameplay.stages.ABotSpeaker;
 var abot:ABotSpeaker;
 var abof:ABotSpeaker;
 
+function onCreate() {}
+
 function onCreatePost()
 {
     var curLevel = Paths.currentLevel;
