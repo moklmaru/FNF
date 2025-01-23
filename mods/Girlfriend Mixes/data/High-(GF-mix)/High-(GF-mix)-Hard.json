@@ -1112,7 +1112,7 @@
 	"offset": 0,
 	"gameOverChar": "gf_sprinklezV2",
 	"song": "High-(GF-mix)",
-	"stage": "limo",
+	"stage": "limoErect",
 	"needsVoices": true,
 	"format": "psych_v1",
 	"speed": 2.5,
