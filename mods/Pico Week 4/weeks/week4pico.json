@@ -1,0 +1,43 @@
+{
+	"storyName": "Your New Week",
+	"difficulties": "hard",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"freeplayColor": [252, 150, 215],
+	"startUnlocked": true,
+	"hideStoryMode": true,
+	"songs": [
+		[
+			"Satin Panties (Pico Mix)",
+			"pico",
+			"mom",
+			[252, 150, 215]
+		],
+		[
+			"High (Pico Mix)",
+			"pico",
+			"mom",
+			[252, 150, 215]
+		],
+		[
+			"Higher",
+			"pico",
+			"mom",
+			[252, 150, 215]
+		],
+		[
+			"Milf (Pico Mix)",
+			"pico",
+			"mom",
+			[252, 150, 215]
+		]
+	],
+	"weekCharacters": [
+		"mom",
+		"pico",
+		"nene"
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Custom Week"
+}

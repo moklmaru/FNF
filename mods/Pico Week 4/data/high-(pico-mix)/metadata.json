@@ -1,0 +1,53 @@
+{
+  "version": "2.2.4",
+  "songName": "High (Pico Mix)",
+  "artist": "Funkin' Sound Project",
+  "charter": "Cool_Name1",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {    },
+    "altVocals": {    }
+  },
+  "playData": {
+    "songVariations": [    ],
+    "difficulties": [
+      "hard"
+    ],
+    "characters": {
+      "player": "pico-playable",
+      "girlfriend": "nene",
+      "opponent": "mom-car",
+      "instrumental": "",
+      "altInstrumentals": [      ]
+    },
+    "stage": "limoRideErect",
+    "noteStyle": "funkin",
+    "ratings": {
+      "easy": 7,
+      "hard": 8,
+      "normal": 0
+    },
+    "previewStart": 0,
+    "previewEnd": 0
+  },
+  "generatedBy": "Friday Night Funkin' - v0.5.0",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 125,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ]
+}
